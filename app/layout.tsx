@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Sayyan.Dev | Web Developer in Kerala, Bangalore, Hyderabad, Chennai & GCC",
-    template: "%s | Sayyan.Dev",
+      "getsayyan.com | Web Developer in Kerala, Bangalore, Hyderabad, Chennai & GCC",
+    template: "%s | getsayyan.com",
   },
 
   description:
@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   keywords: [
     // Branding
     "Sayyan",
-    "Sayyan Dev",
+    "getsayyan.com",
+    "sayyan web designer",
     "Sayyan developer",
 
     // Kerala
@@ -80,11 +81,11 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Sayyan.Dev | Web Developer in Kerala, Bangalore, Hyderabad, Chennai & GCC",
+      "getsayyan.com | Web Developer in Kerala, Bangalore, Hyderabad, Chennai & GCC",
     description:
       "Professional web developer for businesses, startups, and students. Serving India and GCC with modern, fast, SEO-optimized websites.",
-    url: "https://sayyan.dev",
-    siteName: "Sayyan.Dev",
+    url: "https://getsayyan.com",
+    siteName: "getsayyan.com",
     locale: "en_IN",
     type: "website",
   },
@@ -94,7 +95,7 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  metadataBase: new URL("https://sayyan.dev"),
+  metadataBase: new URL("https://getsayyan.com"),
 };
 
 export default function RootLayout({
@@ -140,7 +141,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Sayyan",
-              url: "https://sayyan.dev",
+              url: "https://getsayyan.com",
               jobTitle: "Web Developer",
               areaServed: [
                 "Kerala",
@@ -164,7 +165,7 @@ export default function RootLayout({
               ],
               sameAs: [
                 "https://github.com/yourprofile",
-                "https://linkedin.com/in/yourprofile",
+                "https://in.linkedin.com/in/sayyan-muhammed-bb8105282",
               ],
             }),
           }}
