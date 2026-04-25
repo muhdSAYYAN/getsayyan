@@ -56,7 +56,7 @@ const socialLinks = [
 
 export const SocialSidebar = () => {
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const iconsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const iconsRef = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
     // Entrance: slide in from far right
