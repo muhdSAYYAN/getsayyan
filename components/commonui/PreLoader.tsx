@@ -3,7 +3,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FC, useState, useEffect, useRef } from "react";
-import { Background } from "./Background";
 import { nasalization, quentine, amber } from "@/app/font";
 
 interface H1ComponentProps {
@@ -75,10 +74,9 @@ export const PreLoader = () => {
   return (
     <div
       ref={containerRef}
-      className="overflow-x-hidden w-full h-screen fixed inset-0 z-50 bg-black"
+      className="overflow-x-hidden w-full h-screen fixed inset-0 z-[100] pointer-events-none"
     >
       <div className="flex items-center justify-center fixed h-full w-full">
-        <Background />
 
         <div
           ref={textContainerRef}

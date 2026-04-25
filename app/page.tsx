@@ -84,7 +84,7 @@ export default function Home() {
       {loading && (
         <div
           ref={preloaderRef}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+          className="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none"
         >
           <PreLoader />
         </div>

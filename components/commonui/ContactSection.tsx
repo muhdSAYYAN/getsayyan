@@ -72,7 +72,7 @@ export default function ContactSection() {
   const searchParams = useSearchParams();
   const [service, setService] = useState("Premium Web Development");
   const [countryCode, setCountryCode] = useState("🇮🇳 +91");
-  const [budget, setBudget] = useState("₹10,000 - ₹20,000");
+  const [budget, setBudget] = useState("₹50,000 - ₹1,00,000");
 
   // Handle pre-selected service from query parameter
   useEffect(() => {
@@ -89,20 +89,29 @@ export default function ContactSection() {
 
   const budgetOptions = isIndia
     ? [
-        "₹10,000 - ₹20,000",
-        "₹20,000 - ₹50,000",
-        "₹50,000 - ₹1,00,000",
-        "₹1,00,000+",
+        "Under ₹20,000 (Small scope)",
+        "₹20,000 – ₹50,000",
+        "₹50,000 – ₹1,00,000",
+        "₹1,00,000 – ₹3,00,000",
+        "₹3,00,000 – ₹5,00,000",
+        "₹5,00,000+ (Enterprise)",
+        "Not sure yet — let's discuss",
       ]
-    : ["$150 - $300", "$300 - $600", "$600 - $1200", "$1200+"];
+    : [
+        "$500 - $1,500",
+        "$1,500 - $5,000",
+        "$5,000 - $15,000",
+        "$15,000+",
+        "Not sure yet — let's discuss",
+      ];
 
   const handleCountryChange = (val: string) => {
     setCountryCode(val);
 
     if (val.includes("+91")) {
-      setBudget("₹10,000 - ₹20,000");
+      setBudget("₹50,000 – ₹1,00,000");
     } else {
-      setBudget("$150 - $300");
+      setBudget("$500 - $1,500");
     }
   };
 
@@ -153,12 +162,18 @@ export default function ContactSection() {
             </p>
 
             <div className="space-y-6">
-              <a href={`mailto:${selfData?.email}`} className="flex gap-4 hover:text-white/70 transition-colors">
+              <a
+                href={`mailto:${selfData?.email}`}
+                className="flex gap-4 hover:text-white/70 transition-colors"
+              >
                 <Mail size={20} className="text-white/40" />
                 {selfData?.email}
               </a>
 
-              <a href={`tel:${selfData?.phone}`} className="flex gap-4 hover:text-white/70 transition-colors">
+              <a
+                href={`tel:${selfData?.phone}`}
+                className="flex gap-4 hover:text-white/70 transition-colors"
+              >
                 <Phone size={20} className="text-white/40" />
                 {selfData?.phone}
               </a>
@@ -179,7 +194,8 @@ export default function ContactSection() {
                 Serving Clients Globally: 🇮🇳 🇦🇪 🇴🇲 🇬🇧
               </p>
               <blockquote className="text-neutral-500 italic text-sm leading-relaxed max-w-sm">
-                &quot;Distance is no longer a barrier to digital excellence. I build high-performance solutions for businesses worldwide.&quot;
+                &quot;Distance is no longer a barrier to digital excellence. I
+                build high-performance solutions for businesses worldwide.&quot;
               </blockquote>
             </div>
           </GsapFade>
@@ -246,7 +262,8 @@ export default function ContactSection() {
                   "Odoo Integration",
                   "E-Commerce Platforms",
                   "Warehouse Management",
-                  "Academic Projects",
+                  "Hospital Management System",
+                  "Technical Mentorship & Code Review",
                   "Other (Custom Solution)",
                 ]}
               />
@@ -264,7 +281,7 @@ export default function ContactSection() {
               <textarea
                 name="message"
                 rows={3}
-                placeholder="Tell me about your vision..."
+                placeholder="Briefly describe what you need built, or the problem you're trying to solve. Even rough ideas are welcome."
                 className="w-full bg-transparent border-b border-white/10 pb-2 outline-none resize-none"
               />
 
@@ -276,6 +293,24 @@ export default function ContactSection() {
                 {loading ? "Sending..." : "Send Inquiry"}
                 <ArrowUpRight size={18} />
               </button>
+
+              {/* Response Promise */}
+              <p className="text-center text-neutral-500 text-sm">
+                📬 I respond to every serious inquiry within 24 hours.
+              </p>
+
+              {/* WhatsApp Alternative */}
+              <p className="text-center text-neutral-500 text-sm md:text-base lg:text-lg">
+                Prefer a quicker conversation?{" "}
+                <a
+                  href="https://wa.me/918086232426"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:text-green-300 font-medium transition-colors"
+                >
+                  💬 Chat on WhatsApp →
+                </a>
+              </p>
             </form>
           </GsapFade>
         </div>

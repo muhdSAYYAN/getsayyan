@@ -88,7 +88,7 @@ export const Background = () => {
       {/* Background Shader */}
       <MeshGradient
         className="absolute inset-0 w-full h-full"
-        colors={["#000000", "#0f0f0f", "#4718b4ff", "#0f051fff", "#1e1b4b"]}
+        colors={["#000000", "#0f0f0f", "#111184", "#0f051fff", "#070738"]}
         speed={0.3}
         distortion={1}
         swirl={0.49}

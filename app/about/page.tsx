@@ -58,7 +58,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div ref={heroRef} className="text-center max-w-4xl mb-24 md:mb-32">
           <p className="text-xs md:text-sm tracking-[0.4em] text-neutral-400 uppercase mb-6 inline-block py-2 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
-            Behind The Code
+            The Developer Behind the Work
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
             ABOUT
@@ -67,7 +67,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-neutral-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            {selfData.jobTitle} | {selfData.current_location.city}, {selfData.current_location.state}
+            Freelance Developer · {selfData.current_location.city}, {selfData.current_location.state}
           </p>
         </div>
 
@@ -77,7 +77,13 @@ export default function AboutPage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Who I Am</h2>
             <div className={`${mono.className} space-y-6 text-neutral-300 text-lg leading-relaxed`}>
               <p>{selfData.bio}</p>
-              <p>Based in {selfData.current_location.city}, India — {selfData.name} helps businesses and individuals turn ideas into powerful digital products. From modern web and mobile apps to scalable backend systems and Odoo integrations, I focus on building fast, reliable, and user-friendly solutions that drive real growth.</p>
+              <p>From high-performance web apps to clinical management systems — every project I take on has one measure of success: does it solve the client&apos;s real problem?</p>
+              <ul className="space-y-3 text-base">
+                <li className="flex items-start gap-2"><span className="text-neutral-500 shrink-0">→</span> Direct communication — you work with me, not a project manager</li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 shrink-0">→</span> Clear timelines and honest scoping</li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 shrink-0">→</span> Clean, documented code you can hand off to any developer later</li>
+                <li className="flex items-start gap-2"><span className="text-neutral-500 shrink-0">→</span> I don&apos;t take on more than I can deliver</li>
+              </ul>
             </div>
           </GsapFade>
           

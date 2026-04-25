@@ -3,10 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { RiMenu4Fill, RiCloseLargeFill } from "react-icons/ri";
-import { FiDownload } from "react-icons/fi";
 import { quentine } from "@/app/font";
 import { selfData } from "@/components/Constants/SelfData";
-import { Button } from "./reusableItems/Button";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,7 +52,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between px-6">
           {/* Logo / Name - Click to go Home */}
           <button
-            onClick={() => scrollToSection("header")}
+            onClick={() => {
+              setIsMenuOpen(false);
+              router.push("/");
+            }}
             className="flex items-center space-x-3 group"
           >
             <h1
@@ -91,7 +92,7 @@ export const Navbar = () => {
               }}
               className="text-sm uppercase tracking-widest text-white/70 hover:text-white transition-colors"
             >
-              Works
+              Case Studies
             </button>
             <button
               onClick={() => {
@@ -100,16 +101,8 @@ export const Navbar = () => {
               }}
               className="text-sm uppercase tracking-widest text-white/70 hover:text-white transition-colors"
             >
-              Contact
+              Let's Talk
             </button>
-
-            <Button
-              variant="glass"
-              icon={<FiDownload />}
-              onClick={() => window.open("/Sayyan_E.pdf", "_blank")}
-            >
-              Resume
-            </Button>
           </div>
 
           {/* Mobile Toggle */}
@@ -157,7 +150,7 @@ export const Navbar = () => {
               }}
               className="text-left text-lg font-medium text-white/80"
             >
-              Works
+              Case Studies
             </button>
             <button
               onClick={() => {
@@ -166,15 +159,8 @@ export const Navbar = () => {
               }}
               className="text-left text-lg font-medium text-white/80"
             >
-              Contact
+              Let's Talk
             </button>
-            <a
-              href="/Sayyan_E.pdf"
-              download="Sayyan_Resume.pdf" // This forces the download
-              className="flex items-center justify-center gap-2 w-full py-3 bg-white text-black rounded-xl font-bold"
-            >
-              <FiDownload /> Download Resume
-            </a>
           </div>
         </div>
       </div>

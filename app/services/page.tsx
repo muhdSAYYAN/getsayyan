@@ -33,15 +33,15 @@ const detailedServices = [
   {
     id: "web-dev",
     title: "Premium Web Development",
-    subtitle: "React.js & Next.js Ecosystem",
+    subtitle: "Your Website, Engineered to Convert",
     description:
-      "High-performance, scalable, and secure web applications built from the ground up using modern JavaScript frameworks. I engineer SEO-optimized platforms designed to convert visitors and scale seamlessly.",
+      "A slow or outdated website is costing you leads every day. I build high-performance web applications that load fast, rank on Google, and turn visitors into paying clients — built to scale as your business grows.",
     features: [
       "Next.js Server-Side Rendering (SSR)",
-      "React.js Interactive Frontends",
-      "Core Web Vitals Optimization",
-      "Tailwind CSS & Modern Architecture",
-      "Seamless API Integrations",
+      "Core Web Vitals & SEO Optimized",
+      "Conversion-Focused UI Design",
+      "Seamless API & Payment Integrations",
+      "Mobile-First Responsive Layouts",
       "Secure & Scalable Deployment",
     ],
     icon: <Code2 className="w-10 h-10 md:w-14 md:h-14 text-blue-400" />,
@@ -52,16 +52,16 @@ const detailedServices = [
   {
     id: "app-dev",
     title: "App Development",
-    subtitle: "React Native Solutions",
+    subtitle: "An App Your Customers Will Actually Use",
     description:
-      "Crafting beautiful, cross-platform mobile applications for iOS and Android using React Native. Delivering seamless user experiences that feel fully native while sharing a single highly-maintainable codebase.",
+      "I build iOS and Android apps focused on one thing: keeping your users engaged. From smooth onboarding to daily-use features, every screen is designed to feel native and perform flawlessly — so your brand stays on their home screen.",
     features: [
-      "Cross-Platform Native Modules",
-      "Complex State Management",
+      "Cross-Platform iOS & Android",
+      "Smooth Native-Feel Animations",
       "Offline-First Architecture",
       "Push Notifications Setup",
-      "Smooth App Animations",
       "App Store & Play Store Deployment",
+      "Ongoing Maintenance & Updates",
     ],
     icon: <Smartphone className="w-10 h-10 md:w-14 md:h-14 text-purple-400" />,
     color: "from-purple-500/20 to-transparent",
@@ -71,9 +71,9 @@ const detailedServices = [
   {
     id: "odoo",
     title: "Odoo Integration",
-    subtitle: "ERP Automation",
+    subtitle: "Stop Managing Your Business in Spreadsheets",
     description:
-      "Streamlining your business operations with custom Odoo module development and full-scale ERP integration. From accounting to CRM, I tailor open-source ERP solutions that fit your exact workflow.",
+      "If your team is juggling multiple tools, manually copying data, or dealing with reporting gaps — you need an integrated ERP. I customize and connect Odoo to your existing workflows, automating the repetitive tasks so your team can focus on what actually matters.",
     features: [
       "Custom Module Development",
       "Third-Party API Integrations",
@@ -90,14 +90,14 @@ const detailedServices = [
   {
     id: "ecommerce",
     title: "E-Commerce Platforms",
-    subtitle: "Revenue-Driven Storefronts",
+    subtitle: "A Store Built to Sell — Not Just Display",
     description:
-      "Full-featured online commerce ecosystems tailored to your unique products. Providing everything necessary to sell globally, featuring secure payment logic, shopping carts, and intuitive admin dashboards.",
+      "I build e-commerce platforms that handle real traffic, real orders, and real payment flows without crashing or losing data. From catalog management to checkout optimization and inventory sync, your store will be ready to scale the moment you launch.",
     features: [
       "Payment Gateway Integration",
       "Product & Category Management",
-      "Abandoned Cart Recovery",
       "Order & Invoice Tracking",
+      "Abandoned Cart Recovery",
       "Multi-Currency / Multi-Language",
       "Inventory Syncing",
     ],
@@ -111,9 +111,9 @@ const detailedServices = [
   {
     id: "warehouse",
     title: "Warehouse Management",
-    subtitle: "Logistics & Inventory Control",
+    subtitle: "Know Exactly What’s in Your Warehouse — At All Times",
     description:
-      "Intelligent software systems engineered specifically to orchestrate, monitor, and optimize your entire warehouse footprint, preventing stock-outs and accelerating fulfillment.",
+      "Inventory errors are expensive. I build custom warehouse management systems that give you real-time visibility into every item — inbound, outbound, and on-shelf — reducing losses, speeding up fulfillment, and eliminating the guesswork from your logistics.",
     features: [
       "Real-Time Stock Tracking",
       "Barcode & Scanner Integration",
@@ -128,11 +128,30 @@ const detailedServices = [
     buttonHover: "hover:bg-yellow-500/20",
   },
   {
-    id: "academic",
-    title: "Academic Projects",
-    subtitle: "Mentorship & Execution",
+    id: "hospital-ms",
+    title: "Hospital Management Systems",
+    subtitle: "Modern Operations for Modern Healthcare Providers",
     description:
-      "Comprehensive technical help with college, university, and final-year student projects. I empower students by ensuring robust architecture, clear documentation, and real-world coding standards.",
+      "Paper-based records and disconnected tools are creating costly gaps in patient care. I build custom hospital and clinic management systems that digitize your patient registration, appointment scheduling, EMR documentation, and billing — giving your staff one unified platform and your patients a faster, smoother experience.",
+    features: [
+      "Patient Registration & EMR",
+      "Appointment Scheduling",
+      "Billing & Invoice Management",
+      "Department-Wise Workflows",
+      "Lab & Pharmacy Integration",
+      "Role-Based Staff Access",
+    ],
+    icon: <Globe className="w-10 h-10 md:w-14 md:h-14 text-rose-400" />,
+    color: "from-rose-500/20 to-transparent",
+    borderColor: "border-rose-500/20",
+    buttonHover: "hover:bg-rose-500/20",
+  },
+  {
+    id: "mentorship",
+    title: "Technical Mentorship & Code Review",
+    subtitle: "Get Your Project Built Right the First Time",
+    description:
+      "Whether you’re a student building a final-year project or a junior developer looking for senior-level code review, I help you implement clean architecture and professional-grade practices that go beyond just “making it work.”",
     features: [
       "Concept Validation & Design",
       "Full Stack Implementation",

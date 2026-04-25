@@ -2,7 +2,7 @@ export const selfData = {
   name: "Muhammed Sayyan ",
   first_name: "Muhammed",
   last_name: "Sayyan",
-  jobTitle: "Front-End Developer",
+  jobTitle: "Freelance Web & App Developer",
   workFor: "Zinfog Codelabs Pvt Ltd",
   devname: "Sayyan.dev",
 
@@ -14,28 +14,29 @@ export const selfData = {
 
   email: "sayyanelayodan@gmail.com",
   phone: "+91 8086232426",
+  instagram: "getsayyan",
 
   roles: [
-    "Frontend Architect",
-    "UI Performance Optimizer",
-    "Component Craftsman",
-    "Problem Solver",
-    "React Specialist",
-    "User Experience Builder",
-    "Code Refactor Enthusiast",
-    "Debugging Ninja"
+    "Web Apps That Convert",
+    "Mobile Apps That Stick",
+    "ERP Systems That Scale",
+    "E-Commerce That Sells",
+    "Clinic Systems That Work",
+    "Warehouses That Run Right",
+    "Solutions, Not Just Code",
+    "Delivered On Time"
   ],
 
-  desc: "I design and build modern, scalable web interfaces that deliver smooth and intuitive user experiences.",
+  desc: "I build digital products that work as hard as you do — web apps, mobile apps, clinic systems, and ERP integrations, delivered on time.",
 
-  bio: "I'm a Front-End Developer with 2+ years of experience building scalable web applications using React.js, Next.js, and TypeScript. I focus on creating clean UI architectures, reusable components, and high-performance interfaces that improve user experience and product efficiency.",
+  bio: "I'm a freelance developer based in Kozhikode, Kerala. Over the past 2+ years I've shipped production systems across healthcare, e-commerce, logistics, and ERP integration. My clients aren't paying me to write code — they're paying me to take a problem off their plate and return a working solution.",
 
   about: [
-    "Hi, I'm Sayyan, a Front-End Developer passionate about building fast, scalable, and user-friendly web applications. I enjoy transforming complex ideas into clean and intuitive interfaces.",
-    
-    "My daily toolkit includes React, Next.js, TypeScript, and Tailwind CSS. I focus on building reusable component systems, optimizing UI performance, and maintaining clean code architecture.",
-    
-    "Currently working at Zinfog Codelabs Pvt Ltd, I collaborate with backend teams to integrate REST APIs and deliver production-ready applications. I'm always exploring new technologies and pushing my skills toward full-stack development."
+    "I'm Muhammed Sayyan, a freelance developer based in Kozhikode, Kerala — and I build software that solves real business problems.",
+
+    "Whether you need a customer-facing web app that converts, an internal system your team will actually use, or a mobile app that works flawlessly on launch day — I handle the full stack: architecture, design, development, and delivery.",
+
+    "Direct communication, honest scoping, clean documented code, and no taking on more than I can deliver. You work with me — not a project manager."
   ],
 
   skills: {
