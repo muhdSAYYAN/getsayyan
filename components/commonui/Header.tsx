@@ -42,9 +42,21 @@ const Header = () => {
   return (
     <section
       id="header"
-      className="w-full min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 md:pt-32 pb-10"
+      className="w-full min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 md:pt-32 pb-10 relative"
     >
-      <div ref={container} className="flex flex-col items-center max-w-5xl">
+      {/* 100% Satisfaction Badge (Left Side) */}
+      <div className="hidden xl:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-6 opacity-40 hover:opacity-100 transition-opacity duration-500 z-20">
+        <div className="w-[1px] h-24 bg-gradient-to-b from-transparent to-white/40"></div>
+        <div className="[writing-mode:vertical-lr] rotate-180 tracking-[0.4em] text-[10px] font-bold uppercase text-white/90">
+          100% Satisfaction Guaranteed
+        </div>
+        <div className="w-[1px] h-24 bg-gradient-to-t from-transparent to-white/40"></div>
+      </div>
+
+      <div
+        ref={container}
+        className="flex flex-col items-center max-w-5xl z-10"
+      >
         {/* Availability Badge */}
         <div className="mb-8 flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-inner">
           <span className="relative flex h-2 w-2">
@@ -57,23 +69,22 @@ const Header = () => {
         </div>
 
         <p className="text-xs md:text-sm tracking-[0.5em] text-neutral-500 mb-6 uppercase">
-          Freelance Developer · Kozhikode, Kerala
+          Freelance Developer In Kerala
         </p>
 
         <h1 className="font-bold leading-[1.1] tracking-tighter">
           <span className="block text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-            I Build Digital Products
+            We Create Websites That
           </span>
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent italic pb-2">
-            That Work as Hard as You Do.
+          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-neutral-500 to-neutral-600 bg-clip-text text-transparent pb-2 mt-2">
+            Convert Visitors into Customers
           </span>
         </h1>
 
-        <p className="mt-8 max-w-xl text-neutral-400 text-base md:text-lg leading-relaxed">
-          From high-performance web apps to clinic management systems —
-          I turn your business requirements into software that saves time,
-          reduces costs, and grows revenue.
-          No bloated agencies. No miscommunication. Just results.
+        <p className="mt-8 max-w-2xl text-neutral-400 text-base md:text-lg leading-relaxed mx-auto">
+          As a Full Stack & Web Developer, I create high-end digital experiences
+          for brands that want to stand out. No templates, just pure custom
+          engineering.
         </p>
 
         {/* CTA Buttons */}

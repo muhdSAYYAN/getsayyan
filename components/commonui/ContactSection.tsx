@@ -72,7 +72,6 @@ export default function ContactSection() {
   const searchParams = useSearchParams();
   const [service, setService] = useState("Premium Web Development");
   const [countryCode, setCountryCode] = useState("🇮🇳 +91");
-  const [budget, setBudget] = useState("₹50,000 - ₹1,00,000");
 
   // Handle pre-selected service from query parameter
   useEffect(() => {
@@ -85,34 +84,8 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [popup, setPopup] = useState(false);
 
-  const isIndia = countryCode.includes("+91");
-
-  const budgetOptions = isIndia
-    ? [
-        "Under ₹20,000 (Small scope)",
-        "₹20,000 – ₹50,000",
-        "₹50,000 – ₹1,00,000",
-        "₹1,00,000 – ₹3,00,000",
-        "₹3,00,000 – ₹5,00,000",
-        "₹5,00,000+ (Enterprise)",
-        "Not sure yet — let's discuss",
-      ]
-    : [
-        "$500 - $1,500",
-        "$1,500 - $5,000",
-        "$5,000 - $15,000",
-        "$15,000+",
-        "Not sure yet — let's discuss",
-      ];
-
   const handleCountryChange = (val: string) => {
     setCountryCode(val);
-
-    if (val.includes("+91")) {
-      setBudget("₹50,000 – ₹1,00,000");
-    } else {
-      setBudget("$500 - $1,500");
-    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -266,15 +239,6 @@ export default function ContactSection() {
                   "Technical Mentorship & Code Review",
                   "Other (Custom Solution)",
                 ]}
-              />
-
-              {/* BUDGET */}
-              <CustomSelect
-                label="Expected Budget"
-                name="budget"
-                value={budget}
-                onChange={setBudget}
-                options={budgetOptions}
               />
 
               {/* MESSAGE */}

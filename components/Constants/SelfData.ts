@@ -7,7 +7,7 @@ export const selfData = {
   devname: "Sayyan.dev",
 
   current_location: {
-    city: "Kozhikode",
+    city: "Malappuram",
     state: "Kerala",
     country: "India",
   },
@@ -29,10 +29,10 @@ export const selfData = {
 
   desc: "I build digital products that work as hard as you do — web apps, mobile apps, clinic systems, and ERP integrations, delivered on time.",
 
-  bio: "I'm a freelance developer based in Kozhikode, Kerala. Over the past 2+ years I've shipped production systems across healthcare, e-commerce, logistics, and ERP integration. My clients aren't paying me to write code — they're paying me to take a problem off their plate and return a working solution.",
+  bio: "I'm a freelance developer based in Malappuram, Kerala. Over the past 2+ years I've shipped production systems across healthcare, e-commerce, logistics, and ERP integration. My clients aren't paying me to write code — they're paying me to take a problem off their plate and return a working solution.",
 
   about: [
-    "I'm Muhammed Sayyan, a freelance developer based in Kozhikode, Kerala — and I build software that solves real business problems.",
+    "I'm Muhammed Sayyan, a freelance developer based in Malappuram, Kerala — and I build software that solves real business problems.",
 
     "Whether you need a customer-facing web app that converts, an internal system your team will actually use, or a mobile app that works flawlessly on launch day — I handle the full stack: architecture, design, development, and delivery.",
 
