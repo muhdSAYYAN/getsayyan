@@ -76,7 +76,7 @@ const Header = () => {
           <span className="block text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
             We Create Websites That
           </span>
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-neutral-400 to-neutral-600 bg-clip-text text-transparent pb-2 mt-2">
+          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-neutral-500 to-neutral-600 bg-clip-text text-transparent pb-2 mt-2">
             Convert Visitors into Customers
           </span>
         </h1>
