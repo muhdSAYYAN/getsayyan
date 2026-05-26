@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import ServicesClient from "./ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Services | Low Budget Web & App Development in Malappuram, Kerala",
+  title: "Services | Professional Web & App Development in Malappuram, Kerala",
   description:
-    "Affordable web development, mobile app, Odoo ERP, e-commerce, hospital management & warehouse systems by Sayyan – best low budget freelance developer in Malappuram, Manjeri, Areekode, Kerala. React, Next.js, MERN Stack expert serving India & GCC.",
+    "Affordable web development, mobile app, Odoo ERP, e-commerce, hospital management & warehouse systems by Sayyan – professional freelance developer in Malappuram, Manjeri, Areekode, Kerala. React, Next.js, MERN Stack expert serving India & GCC.",
   keywords: [
     "web development services Malappuram",
     "affordable web developer services Kerala",
-    "low budget website development Kerala",
-    "cheap freelance developer Malappuram",
+    "professional website development Kerala",
+    "freelance developer Malappuram",
     "best value web developer Kerala",
     "Odoo ERP development Malappuram",
     "React developer services Kerala",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "ecommerce development Kerala",
     "hospital management system Kerala",
     "warehouse management system Kerala",
-    "cheap web developer services India",
+    "affordable web developer services India",
     "budget freelance developer services",
     "student project developer Malappuram",
   ],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Services | Affordable Web Development in Malappuram, Kerala",
     description:
-      "Web, app, Odoo ERP, e-commerce & hospital management by Sayyan – best low budget freelance developer in Malappuram, Kerala.",
+      "Web, app, Odoo ERP, e-commerce & hospital management by Sayyan – professional freelance developer in Malappuram, Kerala.",
     url: "https://getsayyan.com/services",
   },
 };

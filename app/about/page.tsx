@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
-  title: "About Sayyan | Low Budget Freelance Web Developer in Malappuram, Kerala",
+  title: "About Sayyan | Professional Freelance Web Developer in Malappuram, Kerala",
   description:
-    "Meet Sayyan – a top-rated, low budget freelance web developer based in Malappuram, Kerala. 2+ years building web apps, mobile apps, Odoo ERP systems, and e-commerce platforms for businesses and students across Kerala, India, UAE & GCC.",
+    "Meet Sayyan – a top-rated, professional freelance web developer based in Malappuram, Kerala. 2+ years building web apps, mobile apps, Odoo ERP systems, and e-commerce platforms for businesses and students across Kerala, India, UAE & GCC.",
   keywords: [
     "about Sayyan web developer",
     "freelance web developer Malappuram",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Sayyan | Freelance Web Developer in Malappuram, Kerala",
     description:
-      "Low budget freelance web developer in Malappuram, Kerala with 2+ years of production experience. React, Next.js, MERN Stack & Odoo expert.",
+      "Professional freelance web developer in Malappuram, Kerala with 2+ years of production experience. React, Next.js, MERN Stack & Odoo expert.",
     url: "https://getsayyan.com/about",
   },
 };
