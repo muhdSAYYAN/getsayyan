@@ -292,83 +292,89 @@ export default function ServicesClient() {
         </div>
 
         {/* Detailed Services Grid */}
-        <div className="w-full flex flex-col gap-12 md:gap-20 mb-32">
-          {detailedServices.map((svc, idx) => (
-            <GsapFade
-              key={svc.id}
-              direction={idx % 2 === 0 ? "left" : "right"}
-              distance={40}
-              duration={0.8}
-              delay={0.1}
-              className="w-full"
-            >
-              <div
-                className={`relative group overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-xl p-8 md:p-12 lg:p-16`}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-32 w-full">
+          {detailedServices.map((svc, idx) => {
+            const isLast = idx === detailedServices.length - 1;
+            return (
+              <GsapFade
+                key={svc.id}
+                direction="up"
+                distance={30}
+                duration={0.8}
+                delay={0.05 * idx}
+                className={`h-full ${isLast ? "md:col-span-2 lg:col-span-1 lg:col-start-2" : ""}`}
               >
                 <div
-                  className={`absolute top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-l ${svc.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`}
-                />
+                  className="relative group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all duration-300 p-6 md:p-8 h-full backdrop-blur-md hover:border-white/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)]"
+                >
+                  {/* Subtle hover gradient glow */}
+                  <div
+                    className={`absolute -inset-px bg-gradient-to-br ${svc.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
+                  />
 
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-                  {/* Left content: Title & Icon */}
-                  <div className="lg:col-span-5 flex flex-col gap-6">
-                    <div
-                      className={`w-fit p-4 rounded-2xl border bg-black/50 backdrop-blur-md ${svc.borderColor} shadow-lg`}
-                    >
-                      {svc.icon}
+                  {/* Card Content */}
+                  <div className="flex flex-col gap-5">
+                    {/* Icon & Badge Header */}
+                    <div className="flex items-center justify-between">
+                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 group-hover:scale-105 transition-transform duration-300 [&_svg]:!w-6 [&_svg]:!h-6">
+                        {svc.icon}
+                      </div>
+                      <span className="text-[10px] tracking-[0.2em] text-neutral-500 uppercase font-bold py-1 px-3 rounded-full border border-white/5 bg-white/[0.02]">
+                        {svc.id === "web-dev" ? "Web" : svc.id === "app-dev" ? "Mobile" : svc.id === "odoo" ? "ERP" : svc.id === "ecommerce" ? "E-com" : svc.id === "warehouse" ? "WMS" : svc.id === "hospital-ms" ? "HMS" : "Mentorship"}
+                      </span>
                     </div>
+
                     <div>
-                      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-2">
+                      <h2 className="text-xl md:text-2xl font-bold tracking-tight mb-1 text-white">
                         {svc.title}
                       </h2>
-                      <h3 className="text-lg md:text-xl text-neutral-400 font-medium tracking-wide">
+                      <p className="text-xs text-neutral-400 font-medium tracking-wide">
                         {svc.subtitle}
-                      </h3>
+                      </p>
                     </div>
-                    <p className="text-neutral-300 leading-relaxed text-base md:text-lg">
+
+                    <p className="text-neutral-400 text-sm leading-relaxed">
                       {svc.description}
                     </p>
-                  </div>
 
-                  {/* Right content: Features */}
-                  <div className="lg:col-span-7 flex flex-col justify-center h-full">
-                    <div className="bg-black/30 rounded-2xl p-6 md:p-8 border border-white/5 shadow-inner">
-                      <h4 className="text-sm tracking-[0.2em] text-neutral-500 uppercase mb-6 font-semibold">
+                    {/* Features List */}
+                    <div className="mt-2">
+                      <h4 className="text-[10px] tracking-[0.15em] text-neutral-500 uppercase mb-3 font-semibold">
                         Core Features
                       </h4>
-                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-x-8 md:gap-y-6">
+                      <ul className="flex flex-col gap-2.5">
                         {svc.features.map((feature, i) => (
                           <li
                             key={i}
-                            className="flex items-start gap-3 group/item"
+                            className="flex items-start gap-2.5 group/item"
                           >
-                            <CheckCircle2 className="w-5 h-5 text-neutral-500 group-hover/item:text-white transition-colors shrink-0 mt-0.5" />
-                            <span className="text-neutral-300 group-hover/item:text-white transition-colors text-sm md:text-base">
+                            <CheckCircle2 className="w-4 h-4 text-neutral-500 group-hover/item:text-white transition-colors shrink-0 mt-0.5" />
+                            <span className="text-neutral-400 group-hover/item:text-neutral-200 transition-colors text-xs leading-snug">
                               {feature}
                             </span>
                           </li>
                         ))}
                       </ul>
-
-                      {/* CTA Button */}
-                      <div className="mt-8 pt-6 border-t border-white/10 flex justify-end">
-                        <button
-                          onClick={() =>
-                            router.push(
-                              `/contact?service=${encodeURIComponent(svc.title)}`,
-                            )
-                          }
-                          className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 text-sm font-semibold transition-all duration-300 bg-white/5 ${svc.buttonHover} hover:border-white/30`}
-                        >
-                          Request a Quote <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </div>
                     </div>
                   </div>
+
+                  {/* CTA button aligned to bottom */}
+                  <div className="mt-8 pt-5 border-t border-white/5 flex justify-end">
+                    <button
+                      onClick={() =>
+                        router.push(
+                          `/contact?service=${encodeURIComponent(svc.title)}`,
+                        )
+                      }
+                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-xs font-semibold transition-all duration-300 bg-white/5 ${svc.buttonHover} hover:border-white/30 text-neutral-300 hover:text-white`}
+                    >
+                      Request a Quote <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </GsapFade>
-          ))}
+              </GsapFade>
+            );
+          })}
         </div>
 
         {/* Additional Services */}

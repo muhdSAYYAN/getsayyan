@@ -207,12 +207,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Sayyan | Best Low Budget Freelance Web Developer in Malappuram, Manjeri, Kerala",
+      "Sayyan | Professional Freelance Web Developer in Malappuram, Manjeri, Kerala",
     template: "%s | Sayyan – Freelance Developer Malappuram",
   },
 
   description:
-    "Sayyan – Top-rated, low budget freelance web developer in Malappuram, Manjeri, Areekode, Perinthalmanna, Kerala. Affordable websites, web apps, mobile apps, React, Next.js, MERN Stack, Odoo ERP. Best value web developer for small businesses, startups, and students across Kerala, India, UAE & GCC.",
+    "Sayyan – Top-rated, professional freelance web developer in Malappuram, Manjeri, Areekode, Perinthalmanna, Kerala. Affordable websites, web apps, mobile apps, React, Next.js, MERN Stack, Odoo ERP. Best value web developer for small businesses, startups, and students across Kerala, India, UAE & GCC.",
 
   keywords: [
     // ── BRAND ──
@@ -228,7 +228,7 @@ export const metadata: Metadata = {
     "web developer Malappuram",
     "best web developer in Malappuram",
     "best freelance developer Malappuram",
-    "low budget web developer Malappuram",
+    "professional web developer Malappuram",
     "affordable web developer Malappuram",
     "cheap web developer Malappuram",
     "website developer Malappuram",
@@ -246,7 +246,7 @@ export const metadata: Metadata = {
     // ── MANJERI ──
     "web developer Manjeri",
     "best web developer in Manjeri",
-    "low budget web developer Manjeri",
+    "professional web developer Manjeri",
     "affordable web developer Manjeri",
     "website developer Manjeri",
     "software developer Manjeri",
@@ -260,7 +260,7 @@ export const metadata: Metadata = {
     // ── AREEKODE ──
     "web developer Areekode",
     "best developer in Areekode",
-    "low budget web developer Areekode",
+    "professional web developer Areekode",
     "website design Areekode",
     "software developer Areekode",
     "React developer Areekode",
@@ -270,7 +270,7 @@ export const metadata: Metadata = {
     // ── PERINTHALMANNA ──
     "web developer Perinthalmanna",
     "best developer in Perinthalmanna",
-    "low budget web developer Perinthalmanna",
+    "professional web developer Perinthalmanna",
     "website developer Perinthalmanna",
     "software developer Perinthalmanna",
     "React developer Perinthalmanna",
@@ -282,7 +282,7 @@ export const metadata: Metadata = {
     "best web developer in Calicut",
     "web developer Kozhikode",
     "best developer in Kozhikode",
-    "low budget web developer Calicut",
+    "professional web developer Calicut",
     "software developer Calicut",
     "React developer Calicut",
     "Next.js developer Calicut",
@@ -304,7 +304,7 @@ export const metadata: Metadata = {
     "top web developer Kerala",
     "website developer Kerala",
     "software developer Kerala",
-    "best low budget web developer Kerala",
+    "best professional web developer Kerala",
     "affordable website developer Kerala",
     "cheap web developer Kerala",
     "low cost web developer Kerala",
@@ -327,7 +327,7 @@ export const metadata: Metadata = {
     "web developer Hyderabad",
     "web developer Chennai",
     "freelance developer India",
-    "best low budget freelance developer India",
+    "best freelance developer India",
     "affordable freelance web developer India",
     "full stack developer India",
 
@@ -341,14 +341,14 @@ export const metadata: Metadata = {
     "Odoo developer UAE",
     "MERN stack developer Dubai",
 
-    // ── LOW BUDGET / AFFORDABLE (High Intent) ──
-    "low budget website development Kerala",
+    // ── PROFESSIONAL & AFFORDABLE (High Intent) ──
+    "professional website development Kerala",
     "affordable website Kerala",
     "cheap website developer Kerala",
     "low cost web development India",
     "budget freelance web developer",
     "best affordable freelance developer",
-    "low budget freelance developer near me",
+    "professional freelance developer near me",
     "cheap freelance web developer India",
     "website under 10000 rupees Kerala",
     "cheap website in Malappuram",
@@ -397,7 +397,7 @@ export const metadata: Metadata = {
     "engineering web project help",
     "final year project developer India",
     "Python project help Kerala",
-    "low budget student project Kerala",
+    "affordable student project Kerala",
 
     // ── INTENT / AI SEARCH ──
     "hire web developer near me",
@@ -422,9 +422,9 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Sayyan | Best Low Budget Freelance Web Developer in Malappuram, Kerala",
+      "Sayyan | Professional Freelance Web Developer in Malappuram, Kerala",
     description:
-      "Top-rated affordable freelance web developer in Malappuram, Manjeri, Areekode, Kerala. Expert in React, Next.js, MERN Stack, Odoo ERP. Best low budget websites for businesses, startups & students. Serving India & GCC.",
+      "Top-rated freelance web developer in Malappuram, Manjeri, Areekode, Kerala. Expert in React, Next.js, MERN Stack, Odoo ERP. High-quality websites for businesses, startups & students. Serving India & GCC.",
     url: "https://getsayyan.com",
     siteName: "Sayyan – Freelance Developer",
     locale: "en_IN",
@@ -434,7 +434,7 @@ export const metadata: Metadata = {
         url: "https://getsayyan.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sayyan – Best Low Budget Freelance Web Developer in Malappuram, Kerala",
+        alt: "Sayyan – Professional Freelance Web Developer in Malappuram, Kerala",
       },
     ],
   },
@@ -442,9 +442,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Sayyan | Low Budget Freelance Web Developer in Malappuram, Kerala",
+      "Sayyan | Professional Freelance Web Developer in Malappuram, Kerala",
     description:
-      "Best affordable freelance web developer in Malappuram, Kerala. React, Next.js, MERN Stack & Odoo. Serving Kerala, India & GCC.",
+      "Professional freelance web developer in Malappuram, Kerala. React, Next.js, MERN Stack & Odoo. Serving Kerala, India & GCC.",
     images: ["https://getsayyan.com/og-image.jpg"],
   },
 
@@ -476,7 +476,7 @@ const personSchema = {
   url: "https://getsayyan.com",
   jobTitle: "Freelance Web Developer & Software Consultant",
   description:
-    "Best low budget freelance web developer in Malappuram, Manjeri, Kerala. Affordable React, Next.js, MERN Stack, Odoo ERP development for small businesses, startups, and students.",
+    "Professional freelance web developer in Malappuram, Manjeri, Kerala. High-quality React, Next.js, MERN Stack, Odoo ERP development for small businesses, startups, and students.",
   image: "https://getsayyan.com/og-image.jpg",
   areaServed: [
     "Malappuram",
@@ -529,7 +529,7 @@ const localBusinessSchema = {
   name: "Sayyan – Freelance Web Developer",
   url: "https://getsayyan.com",
   description:
-    "Best low budget freelance web developer in Malappuram, Manjeri, Areekode, Kerala. Affordable websites, React apps, Next.js, MERN Stack, and Odoo ERP solutions.",
+    "Professional freelance web developer in Malappuram, Manjeri, Areekode, Kerala. High-quality websites, React apps, Next.js, MERN Stack, and Odoo ERP solutions.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Malappuram",
@@ -575,7 +575,7 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Sayyan – Freelance Developer",
   url: "https://getsayyan.com",
-  description: "Best low budget freelance web developer in Malappuram, Kerala.",
+  description: "Professional freelance web developer in Malappuram, Kerala.",
   potentialAction: {
     "@type": "SearchAction",
     target: "https://getsayyan.com/?q={search_term_string}",
@@ -622,15 +622,15 @@ export default function RootLayout({
         {/* ── AI PLATFORM HINTS (ChatGPT, Gemini, Perplexity) ── */}
         <meta
           name="description"
-          content="Sayyan – Best low budget freelance web developer in Malappuram, Manjeri, Areekode, Perinthalmanna, Calicut, Kerala. Affordable React, Next.js, MERN Stack, Odoo ERP expert. Best value websites for small business."
+          content="Sayyan – Professional freelance web developer in Malappuram, Manjeri, Areekode, Perinthalmanna, Calicut, Kerala. React, Next.js, MERN Stack, Odoo ERP expert. Custom websites for small business."
         />
         <meta
           name="subject"
-          content="Affordable Web Development, Low Budget Freelance Developer, Odoo ERP, React, Next.js, MERN Stack"
+          content="Affordable Web Development, Professional Freelance Developer, Odoo ERP, React, Next.js, MERN Stack"
         />
         <meta
           name="classification"
-          content="Freelance Web Developer, Software Consultant, Odoo Developer, Low Budget Developer"
+          content="Freelance Web Developer, Software Consultant, Odoo Developer, Professional Developer"
         />
         <meta
           name="coverage"
