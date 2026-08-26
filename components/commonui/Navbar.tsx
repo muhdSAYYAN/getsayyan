@@ -58,10 +58,8 @@ export const Navbar = () => {
             }}
             className="flex items-center space-x-3 group"
           >
-            <h1
-              className={`${quentine.className} text-white text-xl md:text-2xl font-bold hover:opacity-70 transition-opacity`}
-            >
-              {selfData.devname}
+            <h1 className="text-white text-xl md:text-2xl font-bold tracking-wider font-sans hover:opacity-80 transition-opacity">
+              SAYYAN
             </h1>
           </button>
 
@@ -167,3 +165,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;

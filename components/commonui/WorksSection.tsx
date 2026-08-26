@@ -4,219 +4,179 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { GsapFade } from "./GsapFade";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
-const projects = [
+const rowOneProjects = [
   {
     id: "01",
-    title: "CHOCOLATE POS DASHBOARD",
-    desc: "A comprehensive point-of-sale system and dashboard built specifically for a high-traffic chocolate shop.",
-    tools: ["React", "Node.js", "MongoDB", "Express"],
+    title: "CHOCOLATE POS | RETAIL SYSTEM",
+    slug: "chocolate-pos-dashboard",
+    tools: ["REACT", "NODE.JS", "TAILWIND"],
     img: "/images/chocolate.jpeg",
+    span: "md:col-span-7", // BIG
+    aspect: "aspect-[16/10]",
   },
   {
     id: "02",
-    title: "ABATE AS",
-    desc: "A fully digital Electronic Medical Records (EMR) platform developed to modernize clinic operations.",
-    tools: ["React", "Node.js", "PostgreSQL"],
+    title: "ABATE AS | CLINICAL EMR",
+    slug: "abate-emr-platform",
+    tools: ["REACT", "POSTGRESQL", "EXPRESS"],
     img: "/images/abate.jpeg",
+    span: "md:col-span-5", // SMALL
+    aspect: "aspect-[16/10]",
   },
+];
+
+const rowTwoProjects = [
   {
     id: "03",
-    title: "SWA DIAMONDS",
-    desc: "A breathtaking digital storefront and catalog for a luxury diamond jewelry brand.",
-    tools: ["React", "Next.js", "Node.js"],
+    title: "SWA DIAMONDS | E-COMMERCE",
+    slug: "swa-diamonds",
+    tools: ["NEXT.JS", "REACT", "AWS"],
     img: "/images/swa.png",
+    span: "md:col-span-5", // SMALL (opposite of row 1)
+    aspect: "aspect-[16/10]",
   },
   {
     id: "04",
-    title: "VELOTA",
-    desc: "A versatile dashboard interface and accompanying lightning-fast static website.",
-    tools: ["Next.js", "TypeScript", "GSAP"],
+    title: "VELOTA | ANALYTICS PORTAL",
+    slug: "velota",
+    tools: ["NEXT.JS", "TYPESCRIPT", "GSAP"],
     img: "/images/velota.jpeg",
+    span: "md:col-span-7", // BIG (opposite of row 1)
+    aspect: "aspect-[16/10]",
   },
 ];
 
 export default function SelectedWorks() {
   const router = useRouter();
-  const leftColumn = projects.filter((_, index) => index % 2 === 0);
-  const rightColumn = projects.filter((_, index) => index % 2 !== 0);
 
   return (
     <section
       id="works"
-      className="w-full py-16 md:py-24 text-white px-4 md:px-6"
+      className="w-full py-20 md:py-32 text-white px-6 bg-transparent"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-16">
         {/* Header */}
-        <div className="mb-16 md:mb-20">
-          <p className="text-xs tracking-[0.3em] text-white/40 mb-2">
-            CASE STUDIES
-          </p>
-
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none">
-              SELECTED <br />
-              <span className="block text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-b from-white via-neutral-500 to-neutral-700 bg-clip-text text-transparent">
-                WORKS
-              </span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+          <div>
+            <p className="text-[10px] sm:text-xs tracking-[0.4em] text-white/40 uppercase mb-3 font-mono font-semibold">
+              SELECTED PROJECTS
+            </p>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter leading-none">
+              CASE <span className="text-white/30 border-b border-white/20 pb-1">STUDIES</span>
             </h2>
-            
-            <button 
-              onClick={() => router.push("/works")}
-              className="group flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white hover:text-black transition-all duration-300"
-            >
-              <span className="text-sm font-bold tracking-widest uppercase">View All Case Studies</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
           </div>
+
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-xs md:text-right font-mono leading-relaxed">
+            bespoke digital solutions for brands that value design and performance.
+          </p>
         </div>
 
-        {/* MOBILE LAYOUT */}
-        <div className="flex flex-col gap-14 md:hidden">
-          {projects.map((project, idx) => (
+        {/* Row 1: Big Left (col-7), Small Right (col-5) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          {rowOneProjects.map((project, idx) => (
             <GsapFade
               key={project.id}
               direction="up"
-              distance={50}
-              duration={0.8}
+              distance={40}
+              duration={0.7}
               delay={idx * 0.1}
-              className="flex flex-col group w-full"
+              className={`${project.span} group cursor-pointer flex flex-col w-full`}
             >
-              <div className="relative w-full h-[300px] overflow-hidden rounded-3xl bg-white/5 border border-white/10">
+              {/* Reduced Border Radius: rounded-2xl */}
+              <div
+                onClick={() => router.push(`/case-studies/${project.slug}`)}
+                className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-neutral-900 border border-white/10 mb-4 shadow-2xl group-hover:border-white/30 transition-all duration-500"
+              >
                 <Image
                   src={project.img}
                   alt={project.title}
                   fill
                   unoptimized
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-
-                <div 
-                  onClick={() => router.push("/works")}
-                  className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
-                >
-                  <span className="text-sm tracking-[0.3em] font-bold">
-                    VIEW CASE STUDY
-                  </span>
-                </div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
               </div>
 
-              <div className="mt-6">
-                <h3 className="text-xl font-bold uppercase tracking-tight">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-white/40 italic">{project.desc}</p>
+              {/* Title & Arrow Row */}
+              <div
+                onClick={() => router.push(`/case-studies/${project.slug}`)}
+                className="flex items-start justify-between gap-4"
+              >
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold uppercase tracking-tight text-white group-hover:text-neutral-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-[10px] sm:text-[11px] font-mono tracking-widest text-white/40 uppercase mt-1">
+                    {project.tools.join(" • ")}
+                  </p>
+                </div>
+
+                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-slate-300 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300 shrink-0">
+                  <ArrowUpRight className="w-4 h-4" />
+                </div>
               </div>
             </GsapFade>
           ))}
         </div>
 
-        {/* DESKTOP LAYOUT */}
-        <div className="hidden md:flex flex-row gap-x-20 items-start">
-          {/* LEFT COLUMN */}
-          <div className="flex-1 flex flex-col gap-y-10">
-            {leftColumn.map((project, idx) => (
-              <GsapFade
-                key={project.id}
-                direction="up"
-                distance={50}
-                duration={0.8}
-                delay={idx * 0.1}
-                className="flex flex-col group"
+        {/* Row 2: Small Left (col-5), Big Right (col-7) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          {rowTwoProjects.map((project, idx) => (
+            <GsapFade
+              key={project.id}
+              direction="up"
+              distance={40}
+              duration={0.7}
+              delay={idx * 0.1 + 0.1}
+              className={`${project.span} group cursor-pointer flex flex-col w-full`}
+            >
+              {/* Reduced Border Radius: rounded-2xl */}
+              <div
+                onClick={() => router.push(`/case-studies/${project.slug}`)}
+                className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-neutral-900 border border-white/10 mb-4 shadow-2xl group-hover:border-white/30 transition-all duration-500"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-white/5 border border-white/10">
-                  <Image
-                    src={project.img}
-                    alt={project.title}
-                    fill
-                    unoptimized
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+              </div>
 
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="text-sm tracking-[0.3em] font-bold">
-                      VIEW
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex flex-col sm:flex-row justify-between items-start gap-4">
-                  <div className="max-w-md">
-                    <h3 className="text-2xl font-bold uppercase tracking-tight">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-white/40 leading-relaxed mt-2">
-                      {project.desc}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap lg:justify-end gap-2 shrink-0">
-                    {project.tools.map((tool, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-white/60 transition-all cursor-default hover:scale-105 hover:border-white/40"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </GsapFade>
-            ))}
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="flex-1 flex flex-col gap-y-10 mt-64">
-            {rightColumn.map((project, idx) => (
-              <GsapFade
-                key={project.id}
-                direction="up"
-                distance={50}
-                duration={0.8}
-                delay={idx * 0.1}
-                className="flex flex-col group"
+              {/* Title & Arrow Row */}
+              <div
+                onClick={() => router.push(`/case-studies/${project.slug}`)}
+                className="flex items-start justify-between gap-4"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-white/5 border border-white/10">
-                  <Image
-                    src={project.img}
-                    alt={project.title}
-                    fill
-                    unoptimized
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="text-sm tracking-[0.3em] font-bold">
-                      VIEW
-                    </span>
-                  </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold uppercase tracking-tight text-white group-hover:text-neutral-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-[10px] sm:text-[11px] font-mono tracking-widest text-white/40 uppercase mt-1">
+                    {project.tools.join(" • ")}
+                  </p>
                 </div>
 
-                <div className="mt-6 flex justify-between items-start">
-                  <div>
-                    <h3 className="text-2xl font-bold uppercase tracking-tight">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-white/40 italic">
-                      {project.desc}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap justify-end gap-2">
-                    {project.tools.map((tool, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-white/60 transition-all cursor-default hover:scale-105 hover:border-white/40"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
+                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-slate-300 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300 shrink-0">
+                  <ArrowUpRight className="w-4 h-4" />
                 </div>
-              </GsapFade>
-            ))}
-          </div>
+              </div>
+            </GsapFade>
+          ))}
+        </div>
+
+        {/* Centered Pill Button */}
+        <div className="pt-12 text-center">
+          <button
+            onClick={() => router.push("/works")}
+            className="px-10 py-4 rounded-full border border-white/20 bg-transparent hover:bg-white hover:text-black text-xs font-mono tracking-[0.25em] font-bold uppercase transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+          >
+            EXPLORE ALL WORKS
+          </button>
         </div>
       </div>
     </section>

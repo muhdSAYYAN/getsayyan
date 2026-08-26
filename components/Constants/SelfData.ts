@@ -1,10 +1,10 @@
 export const selfData = {
-  name: "Muhammed Sayyan ",
+  name: "Muhammed Sayyan E",
   first_name: "Muhammed",
-  last_name: "Sayyan",
-  jobTitle: "Freelance Web & App Developer",
+  last_name: "Sayyan E",
+  jobTitle: "Front-End Focused Full-Stack Developer (MERN)",
   workFor: "Zinfog Codelabs Pvt Ltd",
-  devname: "Sayyan.dev",
+  devname: "SAYYAN",
 
   current_location: {
     city: "Malappuram",
@@ -17,26 +17,24 @@ export const selfData = {
   instagram: "getsayyan",
 
   roles: [
-    "Web Apps That Convert",
-    "Mobile Apps That Stick",
-    "ERP Systems That Scale",
-    "E-Commerce That Sells",
-    "Clinic Systems That Work",
-    "Warehouses That Run Right",
-    "Solutions, Not Just Code",
+    "Front-End Focused Full-Stack Developer",
+    "React.js & Next.js Specialist",
+    "TypeScript & MERN Architect",
+    "Scalable Web & Mobile Interfaces",
+    "RESTful API Integration Expert",
+    "3+ Years Experience Shipped",
+    "Reusable UI Component Libraries",
     "Delivered On Time"
   ],
 
-  desc: "I build digital products that work as hard as you do — web apps, mobile apps, clinic systems, and ERP integrations, delivered on time.",
+  desc: "Front-End Focused Full-Stack Developer (MERN) with 3+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB.",
 
-  bio: "I'm a freelance developer based in Malappuram, Kerala. Over the past 2+ years I've shipped production systems across healthcare, e-commerce, logistics, and ERP integration. My clients aren't paying me to write code — they're paying me to take a problem off their plate and return a working solution.",
+  bio: "Front-End Focused Full-Stack Developer (MERN) with 3+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB. Track record of cutting development time by 30% through reusable component libraries, integrating RESTful APIs, and shipping pixel-perfect, accessible, SEO-optimized interfaces in Agile/Scrum teams alongside UI/UX designers and backend engineers.",
 
   about: [
-    "I'm Muhammed Sayyan, a freelance developer based in Malappuram, Kerala — and I build software that solves real business problems.",
-
-    "Whether you need a customer-facing web app that converts, an internal system your team will actually use, or a mobile app that works flawlessly on launch day — I handle the full stack: architecture, design, development, and delivery.",
-
-    "Direct communication, honest scoping, clean documented code, and no taking on more than I can deliver. You work with me — not a project manager."
+    "I'm Muhammed Sayyan E, a Front-End Focused Full-Stack Developer (MERN) based in Malappuram / Kozhikode, Kerala with 3+ years of experience.",
+    "Over the past 3+ years, I've architected and delivered production-grade web interfaces serving thousands of active users across digital health (Buktor), retail POS, e-learning platforms, and luxury e-commerce.",
+    "Specialized in cutting development time by 30% through reusable component libraries, optimizing UI rendering performance with memoization & code splitting, holding under 2% deviation from Figma specs, and reducing UI bugs by 40%."
   ],
 
   skills: {
@@ -44,24 +42,49 @@ export const selfData = {
       "React.js",
       "Next.js",
       "TypeScript",
+      "React Native",
       "JavaScript (ES6+)",
-      "Redux",
+      "HTML5",
+      "CSS3",
       "Tailwind CSS",
       "Bootstrap",
       "Material UI"
     ],
+    stateManagement: [
+      "Redux",
+      "Redux Toolkit",
+      "Context API"
+    ],
     backend: [
       "Node.js",
       "Express.js",
-      "REST APIs"
+      "RESTful API Design & Integration"
     ],
     database: [
+      "MongoDB",
       "SQL"
     ],
     tools: [
       "Git",
+      "GitHub",
       "Postman",
-      "VS Code"
+      "VS Code",
+      "Figma"
+    ],
+    deployment: [
+      "Render",
+      "VPS",
+      "SSH",
+      "Git-Based Deployment"
+    ],
+    practices: [
+      "Responsive Design",
+      "Cross-Browser Compatibility",
+      "WCAG Accessibility",
+      "Agile / Scrum"
+    ],
+    integrations: [
+      "Buktor (Appointment Booking & Patient Scheduling)"
     ]
   },
   experience: [
@@ -71,13 +94,13 @@ export const selfData = {
       role: "Front-End Developer",
       period: "June 2024 – Present",
       points: [
-        "Developed and optimized multiple production-level web interfaces using React, TypeScript, and Tailwind CSS.",
-        "Improved UI performance and rendering speed by implementing memoization, code-splitting, and optimized component design.",
-        "Collaborated with backend teams to integrate REST APIs, ensuring smooth data flow and consistent error handling.",
-        "Enhanced cross-browser responsiveness, reducing UI bugs and improving overall accessibility.",
-        "Implemented reusable UI components, reducing development time by 30%.",
-        "Collaborated with designers to ensure pixel-perfect implementation of Figma designs.",
-        "Integrated Buktor, a doctor-first platform for online consultations, WhatsApp appointment booking, and patient engagement, into the project."
+        "Architected and delivered production-grade web interfaces using React.js, TypeScript, and Tailwind CSS, serving thousands of active users.",
+        "Boosted UI rendering performance by implementing memoization (useMemo, useCallback), lazy loading, and code-splitting, reducing initial load time.",
+        "Integrated RESTful APIs in close collaboration with backend engineers, establishing consistent error-handling patterns and improving data reliability.",
+        "Engineered a reusable component library that cut development time by 30% and improved codebase maintainability across projects.",
+        "Achieved pixel-perfect UI implementation from Figma designs, holding under 2% deviation from design specs.",
+        "Integrated Buktor, an appointment booking platform supporting online consultations and patient scheduling, expanding digital health accessibility.",
+        "Improved cross-browser compatibility and WCAG accessibility compliance, reducing UI bug reports by 40%."
       ]
     },
     {
@@ -86,24 +109,24 @@ export const selfData = {
       role: "Software Engineer",
       period: "April 2023 – May 2024",
       points: [
-        "Developed responsive web pages using React.js and Node.js for scalable learning-platform modules.",
-        "Implemented REST APIs and improved data handling, reducing load time and improving app performance.",
-        "Collaborated in UI/UX discussions to enhance visual consistency and user experience.",
-        "Built reusable components and clean, maintainable code improving development efficiency."
+        "Built responsive, modular web pages and features for a scalable e-learning platform using React.js and Node.js.",
+        "Developed and consumed RESTful APIs, optimizing data-fetching strategies to reduce page load time and enhance application performance.",
+        "Collaborated with UI/UX designers in requirement reviews to ensure visual consistency and intuitive user experience across the platform.",
+        "Authored clean, well-documented, reusable components following SOLID principles, improving team development velocity."
       ]
     }
   ],
   education: [
     {
-      degree: "BSc Computer Science",
+      degree: "Bachelor of Science in Computer Science",
       institution: "Calicut University",
       period: "2020 – 2023"
     }
   ],
   socials_username: {
-    github: "",
-    linkedin: "sayyan-e",
-    instagram: "",
+    github: "sayyanelayodan",
+    linkedin: "sayyanelayodan",
+    instagram: "getsayyan",
     twitter: "",
   }
 };

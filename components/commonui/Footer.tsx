@@ -1,61 +1,45 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { selfData } from "@/components/Constants/SelfData";
-import { FaGithub, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa6";
 
-export function Footer() {
+export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-transparent border-t border-white/10 py-8 px-6 mt-12">
+    <footer className="w-full border-t border-white/10 py-12 px-6 text-neutral-400 bg-transparent relative z-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Left Side: Copyright */}
-        <div className="text-white/60 text-sm tracking-wide text-center md:text-left">
-          &copy; {currentYear} {selfData.name || "Sayyan"}. All rights reserved.
+        <div className="flex flex-col gap-1 text-center md:text-left">
+          <p className="text-white font-bold tracking-wider text-sm uppercase">
+            {selfData.name}
+          </p>
+          <p className="text-xs text-neutral-500">
+            {selfData.jobTitle} · {selfData.current_location.city}, {selfData.current_location.state}
+          </p>
         </div>
 
-        {/* Right Side: Social Media Icons */}
-        <div className="flex flex-wrap items-center justify-center gap-6">
-          {/* <a
-            href={`https://github/${selfData.socials_username.github || "sayyan-e"}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110"
-            aria-label="GitHub"
-          >
-            <FaGithub size={20} />
-          </a> */}
-
-          <a
-            href={`https://instagram.com/${selfData.instagram || ""}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110"
-            aria-label="Instagram"
-          >
-            <FaInstagram size={20} />
-          </a>
-
-          <a
-            href={`https://wa.me/${selfData.phone ? selfData.phone.replace(/[^0-9]/g, "") : ""}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110"
-            aria-label="WhatsApp"
-          >
-            <FaWhatsapp size={20} />
-          </a>
-
-          <a
-            href={`mailto:${selfData.email}`}
-            className="text-white/60 hover:text-white transition-all duration-300 hover:scale-110"
-            aria-label="Email"
-          >
-            <FaEnvelope size={20} />
-          </a>
+        <div className="flex items-center gap-6 text-xs uppercase tracking-widest font-mono">
+          <Link href="/about" className="hover:text-white transition-colors">
+            About
+          </Link>
+          <Link href="/services" className="hover:text-white transition-colors">
+            Services
+          </Link>
+          <Link href="/case-studies" className="hover:text-white transition-colors">
+            Case Studies
+          </Link>
+          <Link href="/contact" className="hover:text-white transition-colors">
+            Contact
+          </Link>
         </div>
+
+        <p className="text-xs text-neutral-600 text-center md:text-right">
+          &copy; {currentYear} {selfData.devname || "Sayyan"}. All rights reserved.
+        </p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

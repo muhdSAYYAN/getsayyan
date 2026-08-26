@@ -43,10 +43,10 @@ const detailedServices = [
       "Mobile-First Responsive Layouts",
       "Secure & Scalable Deployment",
     ],
-    icon: <Code2 className="w-10 h-10 md:w-14 md:h-14 text-blue-400" />,
-    color: "from-blue-500/20 to-transparent",
-    borderColor: "border-blue-500/20",
-    buttonHover: "hover:bg-blue-500/20",
+    icon: <Code2 className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
   {
     id: "app-dev",
@@ -62,29 +62,29 @@ const detailedServices = [
       "App Store & Play Store Deployment",
       "Ongoing Maintenance & Updates",
     ],
-    icon: <Smartphone className="w-10 h-10 md:w-14 md:h-14 text-purple-400" />,
-    color: "from-purple-500/20 to-transparent",
-    borderColor: "border-purple-500/20",
-    buttonHover: "hover:bg-purple-500/20",
+    icon: <Smartphone className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
   {
-    id: "odoo",
-    title: "Odoo Integration",
-    subtitle: "Stop Managing Your Business in Spreadsheets",
+    id: "backend-api",
+    title: "API & Backend Systems",
+    subtitle: "Connect Your Business Tools & Automate Data",
     description:
-      "If your team is juggling multiple tools, manually copying data, or dealing with reporting gaps — you need an integrated ERP. I customize and connect Odoo to your existing workflows, automating the repetitive tasks so your team can focus on what actually matters.",
+      "If your team is juggling multiple tools, manually copying data, or dealing with reporting gaps — you need clean API integrations and backend architecture. I build custom Node.js/Express REST APIs and database workflows so your tools sync automatically.",
     features: [
-      "Custom Module Development",
-      "Third-Party API Integrations",
-      "Workflow Automation",
-      "Data Migration & Upgrades",
-      "Accounting & Sales Modules",
-      "Custom Dashboard Analytics",
+      "Custom RESTful API Architecture",
+      "Third-Party Service & Payment Webhooks",
+      "Database Optimization & Migration",
+      "Microservices & Serverless Functions",
+      "Automated Data Sync Pipelines",
+      "Role-Based Access Control & Security",
     ],
-    icon: <Cpu className="w-10 h-10 md:w-14 md:h-14 text-emerald-400" />,
-    color: "from-emerald-500/20 to-transparent",
-    borderColor: "border-emerald-500/20",
-    buttonHover: "hover:bg-emerald-500/20",
+    icon: <Cpu className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
   {
     id: "ecommerce",
@@ -100,12 +100,10 @@ const detailedServices = [
       "Multi-Currency / Multi-Language",
       "Inventory Syncing",
     ],
-    icon: (
-      <ShoppingCart className="w-10 h-10 md:w-14 md:h-14 text-orange-400" />
-    ),
-    color: "from-orange-500/20 to-transparent",
-    borderColor: "border-orange-500/20",
-    buttonHover: "hover:bg-orange-500/20",
+    icon: <ShoppingCart className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
   {
     id: "warehouse",
@@ -121,10 +119,10 @@ const detailedServices = [
       "Returns Processing",
       "Audit Trail & Reporting",
     ],
-    icon: <Box className="w-10 h-10 md:w-14 md:h-14 text-yellow-400" />,
-    color: "from-yellow-500/20 to-transparent",
-    borderColor: "border-yellow-500/20",
-    buttonHover: "hover:bg-yellow-500/20",
+    icon: <Box className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
   {
     id: "hospital-ms",
@@ -140,10 +138,10 @@ const detailedServices = [
       "Lab & Pharmacy Integration",
       "Role-Based Staff Access",
     ],
-    icon: <Globe className="w-10 h-10 md:w-14 md:h-14 text-rose-400" />,
-    color: "from-rose-500/20 to-transparent",
-    borderColor: "border-rose-500/20",
-    buttonHover: "hover:bg-rose-500/20",
+    icon: <Globe className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
   {
     id: "mentorship",
@@ -159,10 +157,10 @@ const detailedServices = [
       "Database Modeling",
       "Deployment & Hosting Setup",
     ],
-    icon: <GraduationCap className="w-10 h-10 md:w-14 md:h-14 text-cyan-400" />,
-    color: "from-cyan-500/20 to-transparent",
-    borderColor: "border-cyan-500/20",
-    buttonHover: "hover:bg-cyan-500/20",
+    icon: <GraduationCap className="w-10 h-10 md:w-14 md:h-14 text-slate-300" />,
+    color: "from-slate-500/20 to-transparent",
+    borderColor: "border-slate-500/20",
+    buttonHover: "hover:bg-white/10",
   },
 ];
 
@@ -170,50 +168,50 @@ const workSteps = [
   {
     title: "Initial Consultation",
     desc: "We discuss your requirements, goals, and project scope.",
-    icon: <MessageSquare className="w-6 h-6 text-blue-400" />,
+    icon: <MessageSquare className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Proposal & Quote",
     desc: "Receive a detailed proposal with timeline and pricing.",
-    icon: <FileText className="w-6 h-6 text-purple-400" />,
+    icon: <FileText className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Development",
     desc: "Regular updates as I build your solution with best practices.",
-    icon: <Code2 className="w-6 h-6 text-orange-400" />,
+    icon: <Code2 className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Testing & Delivery",
     desc: "Thorough testing, training, and smooth handover.",
-    icon: <Rocket className="w-6 h-6 text-emerald-400" />,
+    icon: <Rocket className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Support",
     desc: "Ongoing support and maintenance after launch.",
-    icon: <Shield className="w-6 h-6 text-pink-400" />,
+    icon: <Shield className="w-6 h-6 text-slate-300" />,
   },
 ];
 
 const additionalServices = [
   {
-    title: "Odoo Support & Maintenance",
-    desc: "Ongoing technical assistance, troubleshooting, module updates, and user training for your Odoo ERP systems.",
-    icon: <Cpu className="w-6 h-6 text-emerald-400" />,
+    title: "API Support & Maintenance",
+    desc: "Ongoing technical assistance, database optimization, API version updates, and cloud infrastructure monitoring.",
+    icon: <Cpu className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Web Management Assistant",
     desc: "Dedicated website monitoring, security patching, performance scaling, and regular content updates.",
-    icon: <Terminal className="w-6 h-6 text-blue-400" />,
+    icon: <Terminal className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Brand Identity & Design",
     desc: "Creative poster design, digital marketing assets, and cohesive branding packages to elevate your presence.",
-    icon: <Star className="w-6 h-6 text-purple-400" />,
+    icon: <Star className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Dynamic QR Code Solutions",
     desc: "Custom QR code generation for marketing campaigns, product tracking, menus, and digital business footprints.",
-    icon: <Tag className="w-6 h-6 text-yellow-400" />,
+    icon: <Tag className="w-6 h-6 text-slate-300" />,
   },
 ];
 
@@ -221,22 +219,22 @@ const whyMe = [
   {
     title: "Quality Assured",
     desc: "As an expert developer, I deliver clean, maintainable code following strict industry standards.",
-    icon: <Star className="w-6 h-6 text-yellow-400" />,
+    icon: <Star className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Client-Focused",
     desc: "Your satisfaction is my priority. I build transparent logic ensuring your needs are fully met.",
-    icon: <HeartHandshake className="w-6 h-6 text-blue-400" />,
+    icon: <HeartHandshake className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Speed & Scale",
     desc: "Using tools like Next.js and React Native ensures efficient development without compromising scaling.",
-    icon: <Zap className="w-6 h-6 text-orange-400" />,
+    icon: <Zap className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Fair Pricing",
     desc: "I offer transparent, competitive, and highly scalable pricing models for all custom solutions.",
-    icon: <Tag className="w-6 h-6 text-emerald-400" />,
+    icon: <Tag className="w-6 h-6 text-slate-300" />,
   },
 ];
 
@@ -268,25 +266,22 @@ export default function ServicesClient() {
   return (
     <div
       ref={container}
-      className="relative min-h-screen overflow-x-hidden text-white pt-32 pb-24"
+      className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent"
     >
       <Navbar />
 
-      <main className="relative z-10 px-6 max-w-7xl mx-auto flex flex-col items-center">
+      <main className="relative z-10 px-6 max-w-7xl mx-auto flex flex-col items-center flex-grow w-full pb-24">
         {/* Hero Section */}
         <div ref={heroRef} className="text-center max-w-4xl mb-24 md:mb-32">
           <p className="text-xs md:text-sm tracking-[0.4em] text-neutral-400 uppercase mb-6 inline-block py-2 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
             What I Provide
           </p>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
-            SERVICES
-            <span className="block bg-gradient-to-r from-white via-neutral-300 to-neutral-600 bg-clip-text text-transparent italic pb-2">
-              I OFFER
-            </span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8">
+            MY <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">SERVICES</span>
           </h1>
           <p className="text-neutral-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
             Professional solutions spanning Next.js web applications, immersive
-            React Native mobile apps, comprehensive Odoo ERP integrations, and
+            React Native mobile apps, scalable RESTful API backend systems, and
             global E-Commerce architectures.
           </p>
         </div>
@@ -307,12 +302,6 @@ export default function ServicesClient() {
                 <div
                   className="relative group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-all duration-300 p-6 md:p-8 h-full backdrop-blur-md hover:border-white/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)]"
                 >
-                  {/* Subtle hover gradient glow */}
-                  <div
-                    className={`absolute -inset-px bg-gradient-to-br ${svc.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
-                  />
-
-                  {/* Card Content */}
                   <div className="flex flex-col gap-5">
                     {/* Icon & Badge Header */}
                     <div className="flex items-center justify-between">
@@ -320,7 +309,7 @@ export default function ServicesClient() {
                         {svc.icon}
                       </div>
                       <span className="text-[10px] tracking-[0.2em] text-neutral-500 uppercase font-bold py-1 px-3 rounded-full border border-white/5 bg-white/[0.02]">
-                        {svc.id === "web-dev" ? "Web" : svc.id === "app-dev" ? "Mobile" : svc.id === "odoo" ? "ERP" : svc.id === "ecommerce" ? "E-com" : svc.id === "warehouse" ? "WMS" : svc.id === "hospital-ms" ? "HMS" : "Mentorship"}
+                        {svc.id === "web-dev" ? "Web" : svc.id === "app-dev" ? "Mobile" : svc.id === "backend-api" ? "API" : svc.id === "ecommerce" ? "E-com" : svc.id === "warehouse" ? "WMS" : svc.id === "hospital-ms" ? "HMS" : "Mentorship"}
                       </span>
                     </div>
 
@@ -366,7 +355,7 @@ export default function ServicesClient() {
                           `/contact?service=${encodeURIComponent(svc.title)}`,
                         )
                       }
-                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-xs font-semibold transition-all duration-300 bg-white/5 ${svc.buttonHover} hover:border-white/30 text-neutral-300 hover:text-white`}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-xs font-semibold transition-all duration-300 bg-white/5 hover:bg-white/10 hover:border-white/30 text-neutral-300 hover:text-white"
                     >
                       Request a Quote <ArrowRight className="w-3.5 h-3.5" />
                     </button>
@@ -381,8 +370,8 @@ export default function ServicesClient() {
         <div className="w-full mb-32">
           <GsapFade direction="up" delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Additional Capabilities
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-4">
+                ADDITIONAL <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">CAPABILITIES</span>
               </h2>
               <p className="text-neutral-400 max-w-2xl mx-auto">
                 Providing ongoing support, branding, and technical
@@ -418,8 +407,8 @@ export default function ServicesClient() {
         <div className="w-full mb-32">
           <GsapFade direction="up" delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                How We Work Together
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-4">
+                HOW WE <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">WORK TOGETHER</span>
               </h2>
               <p className="text-neutral-400 max-w-2xl mx-auto">
                 A seamless, transparent process designed to turn your ideas into
@@ -450,11 +439,11 @@ export default function ServicesClient() {
         </div>
 
         {/* Why Work With Me */}
-        <div className="w-full mb-20">
+        <div className="w-full mb-32">
           <GsapFade direction="up" delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Why Work With Me?
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-4">
+                WHY WORK <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">WITH ME?</span>
               </h2>
               <p className="text-neutral-400 max-w-2xl mx-auto">
                 Every project is handled with precision, care, and a focus on
@@ -485,14 +474,14 @@ export default function ServicesClient() {
           </div>
         </div>
 
-        {/* Bottom CTA to contact */}
+        {/* Bottom CTA to contact with ample bottom padding so footer never touches */}
         <GsapFade
           direction="up"
           delay={0.2}
-          className="w-full mt-16 text-center border-t border-white/10 pt-20"
+          className="w-full text-center border-t border-white/10 pt-20 pb-24 mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start?
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-6">
+            READY TO <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">START?</span>
           </h2>
           <p className="text-neutral-400 max-w-xl mx-auto mb-10 text-lg">
             Every project is unique. Let&apos;s get in touch for a detailed quote
