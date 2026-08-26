@@ -1,26 +1,17 @@
 import type { Metadata } from "next";
 import ContactPageClient from "./ContactPageClient";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Contact | Hire Sayyan – Professional Freelance Developer in Malappuram, Kerala",
+  title: "Contact Sayyan | Budget-Friendly Web Developer",
   description:
-    "Get in touch with Sayyan – professional freelance web developer in Malappuram, Manjeri, Areekode, Kerala. Affordable websites, apps, Odoo ERP, and student projects. Free consultation. Respond within 24 hours.",
-  keywords: [
-    "hire web developer Malappuram",
-    "contact freelance developer Kerala",
-    "affordable web developer contact",
-    "professional developer inquiry Kerala",
-    "get website made Malappuram",
-    "hire React developer Kerala",
-    "freelance developer quote Kerala",
-    "cheap web developer contact India",
-    "student project help Kerala contact",
-  ],
+    "Get a fixed-fee quote — serving Kerala (Malappuram, Manjeri, Calicut, Kozhikode) and the GCC (UAE, Abu Dhabi, Saudi Arabia).",
+  keywords: ALL_TARGET_KEYWORDS,
   alternates: { canonical: "https://getsayyan.com/contact" },
   openGraph: {
-    title: "Contact Sayyan | Hire Professional Freelance Developer – Malappuram",
+    title: "Contact Sayyan | Budget-Friendly Web Developer",
     description:
-      "Hire the best affordable freelance web developer in Malappuram, Kerala. Free consultation. Response within 24 hours.",
+      "Get a fixed-fee quote — serving Kerala (Malappuram, Manjeri, Calicut, Kozhikode) and the GCC (UAE, Abu Dhabi, Saudi Arabia).",
     url: "https://getsayyan.com/contact",
   },
 };

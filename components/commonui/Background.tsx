@@ -6,8 +6,10 @@ import { MeshGradient } from "@paper-design/shaders-react";
 export const Background = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     // Detect screen size
     const checkScreen = () => {
       setIsMobile(window.innerWidth < 768);
@@ -86,16 +88,20 @@ export const Background = () => {
       </svg>
 
       {/* Background Shader */}
-      <MeshGradient
-        className="absolute inset-0 w-full h-full"
-        colors={["#000000", "#0f0f0f", "#111184", "#0f051fff", "#070738"]}
-        speed={0.3}
-        distortion={1}
-        swirl={0.49}
-        grainMixer={0}
-        grainOverlay={0}
-        offsetX={isMobile ? -0.2 : -0.66} // ✅ Mobile centered, desktop unchanged
-      />
+      {isMounted && (
+        <MeshGradient
+          className="absolute inset-0 w-full h-full"
+          colors={["#000000", "#0f0f0f", "#111184", "#0f051f", "#070738"]}
+          speed={0.3}
+          distortion={1}
+          swirl={0.49}
+          grainMixer={0}
+          grainOverlay={0}
+          offsetX={isMobile ? -0.2 : -0.66} // ✅ Mobile centered, desktop unchanged
+        />
+      )}
     </div>
   );
 };
+
+export default Background;

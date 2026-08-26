@@ -81,21 +81,18 @@ export default function WorksClient() {
   return (
     <div
       ref={container}
-      className="relative min-h-screen overflow-x-hidden text-white pt-32 pb-24"
+      className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent"
     >
       <Navbar />
 
-      <main className="relative z-10 px-6 max-w-7xl mx-auto flex flex-col items-center">
+      <main className="relative z-10 px-6 max-w-7xl mx-auto flex flex-col items-center flex-grow w-full">
         {/* Hero Section */}
         <div ref={heroRef} className="text-center max-w-4xl mb-24 md:mb-32">
           <p className="text-xs md:text-sm tracking-[0.4em] text-neutral-400 uppercase mb-6 inline-block py-2 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
             Case Studies
           </p>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
-            DIGITAL
-            <span className="block bg-gradient-to-r from-white via-neutral-300 to-neutral-600 bg-clip-text text-transparent italic pb-2">
-              CRAFTSMANSHIP
-            </span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8">
+            FEATURED <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">CASE STUDIES</span>
           </h1>
           <p className="text-neutral-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
             A curated selection of elaborated projects, representing my ability
@@ -202,8 +199,8 @@ export default function WorksClient() {
           delay={0.2}
           className="w-full mt-16 text-center border-t border-white/10 pt-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Have a project in mind?
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-6">
+            HAVE A PROJECT <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">IN MIND?</span>
           </h2>
           <p className="text-neutral-400 max-w-xl mx-auto mb-10 text-lg">
             Whether it&apos;s an enterprise EMR, an e-commerce platform, or a complex dashboard, let&apos;s build it together.

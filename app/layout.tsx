@@ -199,6 +199,8 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -206,212 +208,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "Sayyan | Professional Freelance Web Developer in Malappuram, Manjeri, Kerala",
-    template: "%s | Sayyan – Freelance Developer Malappuram",
+    default: "Sayyan | Web Developer in Malappuram, Kerala",
+    template: "%s | Sayyan",
   },
-
   description:
-    "Sayyan – Top-rated, professional freelance web developer in Malappuram, Manjeri, Areekode, Perinthalmanna, Kerala. Affordable websites, web apps, mobile apps, React, Next.js, MERN Stack, Odoo ERP. Best value web developer for small businesses, startups, and students across Kerala, India, UAE & GCC.",
-
-  keywords: [
-    // ── BRAND ──
-    "Sayyan",
-    "Sayyan Web Solutions",
-    "getsayyan.com",
-    "sayyan web developer",
-    "sayyan web designer",
-    "sayyan freelance developer Kerala",
-    "sayyan developer Malappuram",
-
-    // ── MALAPPURAM (Primary Focus) ──
-    "web developer Malappuram",
-    "best web developer in Malappuram",
-    "best freelance developer Malappuram",
-    "professional web developer Malappuram",
-    "affordable web developer Malappuram",
-    "cheap web developer Malappuram",
-    "website developer Malappuram",
-    "software developer Malappuram",
-    "web design Malappuram",
-    "React developer Malappuram",
-    "Next.js developer Malappuram",
-    "MERN stack developer Malappuram",
-    "Odoo developer Malappuram",
-    "freelance developer Malappuram",
-    "web development agency Malappuram",
-    "top web developer Malappuram",
-    "student project developer Malappuram",
-
-    // ── MANJERI ──
-    "web developer Manjeri",
-    "best web developer in Manjeri",
-    "professional web developer Manjeri",
-    "affordable web developer Manjeri",
-    "website developer Manjeri",
-    "software developer Manjeri",
-    "web design Manjeri",
-    "React developer Manjeri",
-    "Next.js developer Manjeri",
-    "MERN stack developer Manjeri",
-    "Odoo developer Manjeri",
-    "freelance developer Manjeri",
-
-    // ── AREEKODE ──
-    "web developer Areekode",
-    "best developer in Areekode",
-    "professional web developer Areekode",
-    "website design Areekode",
-    "software developer Areekode",
-    "React developer Areekode",
-    "Odoo developer Areekode",
-    "freelance web developer Areekode",
-
-    // ── PERINTHALMANNA ──
-    "web developer Perinthalmanna",
-    "best developer in Perinthalmanna",
-    "professional web developer Perinthalmanna",
-    "website developer Perinthalmanna",
-    "software developer Perinthalmanna",
-    "React developer Perinthalmanna",
-    "MERN stack Perinthalmanna",
-    "Odoo developer Perinthalmanna",
-
-    // ── CALICUT / KOZHIKODE ──
-    "web developer Calicut",
-    "best web developer in Calicut",
-    "web developer Kozhikode",
-    "best developer in Kozhikode",
-    "professional web developer Calicut",
-    "software developer Calicut",
-    "React developer Calicut",
-    "Next.js developer Calicut",
-    "Odoo developer Calicut",
-    "MERN stack developer Calicut",
-
-    // ── OTHER KERALA TOWNS ──
-    "web developer Kondotty",
-    "web developer Tirur",
-    "web developer Kottakkal",
-    "web developer Ponnani",
-    "web developer Palakkad",
-    "web developer Thrissur",
-    "web developer Kochi",
-    "web developer Trivandrum",
-
-    // ── KERALA GENERAL ──
-    "best web developer in Kerala",
-    "top web developer Kerala",
-    "website developer Kerala",
-    "software developer Kerala",
-    "best professional web developer Kerala",
-    "affordable website developer Kerala",
-    "cheap web developer Kerala",
-    "low cost web developer Kerala",
-    "budget web developer Kerala",
-    "React developer Kerala",
-    "Next.js developer Kerala",
-    "MERN stack developer Kerala",
-    "Odoo developer Kerala",
-    "Odoo ERP Kerala",
-    "full stack developer Kerala",
-    "freelance web developer Kerala",
-    "web development company Kerala",
-
-    // ── INDIA CITIES ──
-    "web developer Bangalore",
-    "React developer Bangalore",
-    "Next.js developer Bangalore",
-    "MERN stack Bangalore",
-    "Odoo developer Bangalore",
-    "web developer Hyderabad",
-    "web developer Chennai",
-    "freelance developer India",
-    "best freelance developer India",
-    "affordable freelance web developer India",
-    "full stack developer India",
-
-    // ── GCC ──
-    "web developer Dubai",
-    "web developer UAE",
-    "web developer Saudi Arabia",
-    "freelance developer UAE",
-    "affordable web developer UAE",
-    "React developer UAE",
-    "Odoo developer UAE",
-    "MERN stack developer Dubai",
-
-    // ── PROFESSIONAL & AFFORDABLE (High Intent) ──
-    "professional website development Kerala",
-    "affordable website Kerala",
-    "cheap website developer Kerala",
-    "low cost web development India",
-    "budget freelance web developer",
-    "best affordable freelance developer",
-    "professional freelance developer near me",
-    "cheap freelance web developer India",
-    "website under 10000 rupees Kerala",
-    "cheap website in Malappuram",
-    "affordable website in Malappuram",
-
-    // ── TECH STACK KEYWORDS ──
-    "React developer",
-    "Next.js developer",
-    "MERN stack developer",
-    "full stack developer",
-    "Node.js developer",
-    "MongoDB developer",
-    "Express.js developer",
-    "JavaScript developer",
-    "TypeScript developer",
-    "Tailwind CSS developer",
-
-    // ── ODOO SPECIFIC ──
-    "Odoo developer India",
-    "Odoo ERP developer",
-    "Odoo customization",
-    "Odoo implementation Kerala",
-    "Odoo module development",
-    "Odoo 17 developer",
-    "Odoo consultant India",
-    "Odoo POS developer",
-    "Odoo ecommerce developer",
-
-    // ── SERVICES ──
-    "ecommerce website developer",
-    "business website development",
-    "landing page developer",
-    "web app developer",
-    "mobile responsive website",
-    "SEO optimized website",
-    "custom web application",
-    "API development",
-    "backend developer India",
-
-    // ── STUDENT / COLLEGE PROJECTS ──
-    "student web development projects",
-    "college final year projects web development",
-    "mini project for students web",
-    "MCA project developer Kerala",
-    "BCA project developer Kerala",
-    "engineering web project help",
-    "final year project developer India",
-    "Python project help Kerala",
-    "affordable student project Kerala",
-
-    // ── INTENT / AI SEARCH ──
-    "hire web developer near me",
-    "best web developer near Malappuram",
-    "affordable website developer Kerala",
-    "who is the best developer in Malappuram",
-    "web developer for small business Kerala",
-    "get website made in Kerala",
-    "best value freelance developer Kerala",
-    "best budget web developer in Kerala",
-    "find freelance web developer Malappuram",
-  ],
-
-
+    "Freelance full-stack web developer based in Malappuram, Kerala. Custom React, Next.js and MERN Stack websites — budget-friendly, fixed-fee pricing.",
+  keywords: ALL_TARGET_KEYWORDS,
   authors: [{ name: "Sayyan", url: "https://getsayyan.com" }],
   creator: "Sayyan Web Solutions",
   publisher: "Sayyan Web Solutions",
@@ -654,6 +456,46 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Sayyan Web Solutions",
+              "url": "https://getsayyan.com",
+              "telephone": "+918086232426",
+              "email": "sayyanelayodan@gmail.com",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Malappuram",
+                "addressRegion": "Kerala",
+                "addressCountry": "IN"
+              },
+              "areaServed": [
+                { "@type": "City", "name": "Malappuram" },
+                { "@type": "City", "name": "Manjeri" },
+                { "@type": "City", "name": "Calicut" },
+                { "@type": "City", "name": "Kozhikode" },
+                { "@type": "City", "name": "Kochi" },
+                { "@type": "State", "name": "Kerala" },
+                { "@type": "Country", "name": "India" },
+                { "@type": "City", "name": "Dubai" },
+                { "@type": "City", "name": "Abu Dhabi" },
+                { "@type": "Country", "name": "United Arab Emirates" },
+                { "@type": "City", "name": "Riyadh" },
+                { "@type": "Country", "name": "Saudi Arabia" },
+                { "@type": "Country", "name": "Qatar" },
+                { "@type": "Country", "name": "Kuwait" },
+                { "@type": "Country", "name": "Oman" },
+                { "@type": "Country", "name": "Bahrain" }
+              ],
+              "keywords": "web developer Malappuram, best web developer Malappuram, budget friendly web developer Malappuram, web developer Manjeri, best web developer Kerala, best web developer Calicut, best web developer Kozhikode, web developer GCC, best web developer UAE, best web developer Abu Dhabi, budget friendly web developer Kerala",
+              "founder": { "@type": "Person", "name": "Muhammed Sayyan" }
+            })
+          }}
         />
       </head>
 

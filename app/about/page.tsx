@@ -1,25 +1,17 @@
 import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "About Sayyan | Professional Freelance Web Developer in Malappuram, Kerala",
+  title: "About Sayyan | Web Developer, Malappuram & Manjeri",
   description:
-    "Meet Sayyan – a top-rated, professional freelance web developer based in Malappuram, Kerala. 2+ years building web apps, mobile apps, Odoo ERP systems, and e-commerce platforms for businesses and students across Kerala, India, UAE & GCC.",
-  keywords: [
-    "about Sayyan web developer",
-    "freelance web developer Malappuram",
-    "best affordable developer Kerala",
-    "who is sayyan developer",
-    "low budget developer Malappuram",
-    "cheap web developer Kerala",
-    "React developer Malappuram",
-    "MERN stack developer Kerala",
-  ],
+    "Freelance developer serving Malappuram, Manjeri and across Kerala with affordable, custom-built websites and full-stack MERN systems.",
+  keywords: ALL_TARGET_KEYWORDS,
   alternates: { canonical: "https://getsayyan.com/about" },
   openGraph: {
-    title: "About Sayyan | Freelance Web Developer in Malappuram, Kerala",
+    title: "About Sayyan | Web Developer, Malappuram & Manjeri",
     description:
-      "Professional freelance web developer in Malappuram, Kerala with 2+ years of production experience. React, Next.js, MERN Stack & Odoo expert.",
+      "Freelance developer serving Malappuram, Manjeri and across Kerala with affordable, custom-built websites and full-stack MERN systems.",
     url: "https://getsayyan.com/about",
   },
 };
