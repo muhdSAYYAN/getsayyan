@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -26,7 +26,27 @@ import {
   Smartphone,
   Box,
   Terminal,
+  ChevronDown,
 } from "lucide-react";
+
+const faqs = [
+  {
+    q: "What technologies do you use?",
+    a: "I primarily build full-stack web and mobile applications using React, Next.js, TypeScript, Node.js, Express, MongoDB, and PostgreSQL. I also specialize in REST API integrations and React Native mobile development.",
+  },
+  {
+    q: "How long does a typical web application project take?",
+    a: "Simple landing pages or small portals take 1 to 2 weeks. Comprehensive full-stack platforms, POS dashboards, or E-Commerce platforms usually range between 3 to 6 weeks depending on requirements.",
+  },
+  {
+    q: "Do you offer post-launch maintenance and support?",
+    a: "Yes. I provide ongoing technical maintenance, performance monitoring, server scaling, security updates, and feature additions after launch.",
+  },
+  {
+    q: "Can you assist computer science students with academic projects?",
+    a: "Absolutely. I provide 1-on-1 mentorship, clean code architecture, project setup support, and detailed logic explanations to prepare students for final-year vivas.",
+  },
+];
 
 const detailedServices = [
   {
@@ -242,6 +262,11 @@ export default function ServicesClient() {
   const router = useRouter();
   const container = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (idx: number) => {
+    setOpenFaqIndex(openFaqIndex === idx ? null : idx);
+  };
 
   useGSAP(
     () => {
@@ -471,6 +496,51 @@ export default function ServicesClient() {
                 </div>
               </GsapFade>
             ))}
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="w-full mb-32 border-t border-white/10 pt-20">
+          <GsapFade direction="up" delay={0.1}>
+            <div className="text-center mb-16">
+              <p className="text-xs tracking-[0.4em] text-white/40 uppercase mb-4 font-semibold">
+                Questions &amp; Answers
+              </p>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-4">
+                FREQUENTLY ASKED <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">QUESTIONS</span>
+              </h2>
+              <p className="text-neutral-400 max-w-xl mx-auto text-sm md:text-base">
+                Common questions about working with me, project timelines, and technical deliveries.
+              </p>
+            </div>
+          </GsapFade>
+
+          <div className="space-y-4 max-w-4xl mx-auto">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaqIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-all"
+                >
+                  <button
+                    onClick={() => toggleFaq(idx)}
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-lg hover:bg-white/[0.04] transition-colors"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-slate-300 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  {isOpen && (
+                    <div className="px-6 pb-6 text-neutral-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -101,6 +101,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Case Study Subpages
     {
+      path: "/case-studies/vazhayil-natural",
+      file: "app/case-studies/vazhayil-natural/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      path: "/case-studies/qint-group",
+      file: "app/case-studies/qint-group/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
       path: "/case-studies/chocolate-pos-dashboard",
       file: "app/case-studies/chocolate-pos-dashboard/page.tsx",
       changeFrequency: "monthly" as const,

@@ -22,6 +22,24 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    slug: "vazhayil-natural",
+    title: "Vazhayil Natural Platform",
+    headline: "Eco-Tech & Decentralized Waste Management Platform",
+    desc: "A bespoke biological solutions web application engineered for Vazhayil Natural to present Easy Composter Inoculum, interactive process guides, and WhatsApp order routing.",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+    img: "/images/vazhayilnatural-eco-platform-nextjs.webp",
+    alt: "Vazhayil Natural decentralized organic waste management platform built with Next.js",
+  },
+  {
+    slug: "qint-group",
+    title: "QINT Group Platform",
+    headline: "MEP Testing, HVAC Commissioning & Handover Management Platform",
+    desc: "An integrated engineering web platform engineered for QINT Group KSA presenting TAB services, acoustic spray works, movable wall partitions, and whole-building handover management across Saudi Arabia.",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "React"],
+    img: "/images/quint.jpeg",
+    alt: "QINT Group MEP Testing and HVAC Commissioning platform built with Next.js and React",
+  },
+  {
     slug: "chocolate-pos-dashboard",
     title: "Chocolate POS Dashboard",
     headline: "Point-of-Sale System for a High-Traffic Retail Shop",

@@ -40,9 +40,8 @@ export const Navbar = () => {
       className="fixed top-4 left-0 right-0 z-[100] transition-all duration-500 ease-in-out px-4 translate-y-0 opacity-100"
     >
       <div
-        className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 border border-white/5 backdrop-blur-md ${
-          isScrolled ? "bg-black/60 py-2 shadow-2xl" : "bg-transparent py-4"
-        }`}
+        className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 border border-white/5 backdrop-blur-md ${isScrolled ? "bg-black/60 py-2 shadow-2xl" : "bg-transparent py-4"
+          }`}
       >
         <div className="flex items-center justify-between px-6">
           {/* Logo / Name - Click to go Home Top */}
@@ -78,7 +77,7 @@ export const Navbar = () => {
             <button
               onClick={() => {
                 setIsMenuOpen(false);
-                router.push("/case-studies");
+                router.push("/works");
               }}
               className="text-sm uppercase tracking-widest text-white/70 hover:text-white transition-colors"
             >
@@ -110,9 +109,8 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-[300px] opacity-100 mt-4" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-[300px] opacity-100 mt-4" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="flex flex-col space-y-4 px-6 pb-6 border-t border-white/10 pt-6">
             <button
