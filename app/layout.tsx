@@ -263,10 +263,6 @@ export const metadata: Metadata = {
   },
 
   metadataBase: new URL("https://getsayyan.com"),
-
-  verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE", // replace with real code
-  },
 };
 
 // ── STRUCTURED DATA ──────────────────────────────────────────────────────────
