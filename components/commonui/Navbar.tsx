@@ -3,8 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { RiMenu4Fill, RiCloseLargeFill } from "react-icons/ri";
-import { quentine } from "@/app/font";
-import { selfData } from "@/components/Constants/SelfData";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,23 +11,11 @@ export const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Smooth scroll function
-  const scrollToSection = (sectionId: string) => {
-    setIsMenuOpen(false);
-    if (pathname !== "/") {
-      router.push(`/#${sectionId}`);
-    } else {
-      const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > 50);
 
-      // Close mobile menu on scroll down (maintaining original functionality)
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
         setIsMenuOpen(false);
       }
@@ -40,22 +26,27 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLogoClick = () => {
+    setIsMenuOpen(false);
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push("/");
+    }
+  };
+
   return (
     <nav
-      className={`fixed top-4 left-0 right-0 z-[100] transition-all duration-500 ease-in-out px-4 translate-y-0 opacity-100`}
+      className="fixed top-4 left-0 right-0 z-[100] transition-all duration-500 ease-in-out px-4 translate-y-0 opacity-100"
     >
       <div
-        className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 border border-white/5 backdrop-blur-md ${
-          isScrolled ? "bg-black/60 py-2 shadow-2xl" : "bg-transparent py-4"
-        }`}
+        className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 border border-white/5 backdrop-blur-md ${isScrolled ? "bg-black/60 py-2 shadow-2xl" : "bg-transparent py-4"
+          }`}
       >
         <div className="flex items-center justify-between px-6">
-          {/* Logo / Name - Click to go Home */}
+          {/* Logo / Name - Click to go Home Top */}
           <button
-            onClick={() => {
-              setIsMenuOpen(false);
-              router.push("/");
-            }}
+            onClick={handleLogoClick}
             className="flex items-center space-x-3 group"
           >
             <h1 className="text-white text-xl md:text-2xl font-bold tracking-wider font-sans hover:opacity-80 transition-opacity">
@@ -118,9 +109,8 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-[300px] opacity-100 mt-4" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-[300px] opacity-100 mt-4" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="flex flex-col space-y-4 px-6 pb-6 border-t border-white/10 pt-6">
             <button
@@ -144,7 +134,7 @@ export const Navbar = () => {
             <button
               onClick={() => {
                 setIsMenuOpen(false);
-                router.push("/works");
+                router.push("/case-studies");
               }}
               className="text-left text-lg font-medium text-white/80"
             >

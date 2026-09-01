@@ -13,42 +13,68 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 const detailedProjects = [
   {
     id: "01",
+    title: "VAZHAYIL NATURAL",
+    category: "Eco-Tech & Organic Waste Management",
+    desc: "A modern biological solutions web platform engineered for Vazhayil Natural Private Limited. Features interactive product showcases for Easy Composter Inoculum, step-by-step biological composting workflows, customer trust metrics, and direct WhatsApp commerce integration.",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "React"],
+    img: "/images/vazhayilnatural.webp",
+    link: "/case-studies/vazhayil-natural",
+    projectlink: "https://vazhayilnatural.netlify.app/",
+    color: "from-emerald-500/20 to-transparent",
+  },
+  {
+    id: "02",
+    title: "QINT GROUP",
+    category: "MEP Testing, HVAC & Handover Management",
+    desc: "An integrated engineering web platform engineered for QINT Group KSA. Features technical showcases for MEP Testing, TAB, HVAC Commissioning, Acoustic Spray, and building handover management across Saudi Arabia.",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "React"],
+    img: "/images/quint.jpeg",
+    link: "/case-studies/qint-group",
+    projectlink: "https://qintgroup.com/",
+    color: "from-indigo-500/20 to-transparent",
+  },
+  {
+    id: "03",
     title: "CHOCOLATE POS DASHBOARD",
     category: "Retail Tech & Web Application",
     desc: "A comprehensive point-of-sale system and dashboard built specifically for a high-traffic chocolate shop. Features real-time inventory management, sales tracking, staff performance metrics, and seamless checkout integrations to handle complex retail flows.",
     tools: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     img: "/images/chocolate.jpeg",
-    link: "#",
+    link: "/case-studies/chocolate-pos-dashboard",
+    projectlink: "",
     color: "from-orange-500/20 to-transparent",
   },
   {
-    id: "02",
+    id: "04",
     title: "ABATE AS",
     category: "Healthcare EMR",
     desc: "A fully digital Electronic Medical Records (EMR) platform developed to modernize clinic operations. Features secure patient data tracking, appointment scheduling engines, billing integration, and specialized modules for doctors to input prescriptions rapidly.",
     tools: ["React", "Node.js", "PostgreSQL", "Socket.io"],
     img: "/images/abate.jpeg",
-    link: "#",
+    link: "/case-studies/abate-emr-platform",
+    projectlink: "",
     color: "from-blue-500/20 to-transparent",
   },
   {
-    id: "03",
+    id: "05",
     title: "SWA DIAMONDS",
     category: "E-Commerce & High-End Branding",
     desc: "A breathtaking digital storefront and catalog for a luxury diamond jewelry brand. Crafted with meticulous attention to detail to ensure high-resolution imagery loads flawlessly, backed by a powerful CMS for real-time jewelry stock updates.",
     tools: ["React", "Node.js", "AWS S3", "Next.js"],
     img: "/images/swa.png",
-    link: "#",
+    link: "/case-studies/swa-diamonds",
+    projectlink: "",
     color: "from-purple-500/20 to-transparent",
   },
   {
-    id: "04",
+    id: "06",
     title: "VELOTA",
     category: "Analytics Dashboard & Static Platform",
     desc: "A versatile dashboard interface and accompanying lightning-fast static website. Engineered for maximum performance to deliver near-instant page load times while providing the client robust internal analytics tools.",
     tools: ["Next.js", "TypeScript", "Prisma", "GSAP"],
     img: "/images/velota.jpeg",
-    link: "#",
+    link: "/case-studies/velota",
+    projectlink: "",
     color: "from-emerald-500/20 to-transparent",
   },
 ];
@@ -92,7 +118,7 @@ export default function WorksClient() {
             Case Studies
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8">
-            FEATURED <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">CASE STUDIES</span>
+            <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">CASE STUDIES</span>
           </h1>
           <p className="text-neutral-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
             A curated selection of elaborated projects, representing my ability
@@ -115,16 +141,18 @@ export default function WorksClient() {
                 className="w-full"
               >
                 <div
-                  className={`flex flex-col ${
-                    isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                  } gap-12 lg:gap-20 items-center justify-between group`}
+                  className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                    } gap-12 lg:gap-20 items-center justify-between group`}
                 >
                   {/* Image Presentation */}
                   <div className="w-full lg:w-1/2 relative">
                     <div
                       className={`absolute -inset-4 bg-gradient-to-tr ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl rounded-full pointer-events-none -z-10`}
                     />
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-white/5 border border-white/10 shadow-2xl">
+                    <div
+                      onClick={() => router.push(project.link)}
+                      className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-white/5 border border-white/10 shadow-2xl cursor-pointer"
+                    >
                       <Image
                         src={project.img}
                         alt={project.title}
@@ -132,13 +160,27 @@ export default function WorksClient() {
                         unoptimized
                         className="object-cover transition-transform duration-1000 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <a
-                          href={project.link}
-                          className="px-6 py-3 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm text-sm tracking-[0.2em] font-bold hover:bg-white hover:text-black transition-colors flex items-center gap-2"
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            router.push(project.link);
+                          }}
+                          className="px-5 py-2.5 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm text-xs tracking-[0.2em] font-bold hover:bg-white hover:text-black transition-colors"
                         >
-                          VIEW PROJECT <ExternalLink className="w-4 h-4" />
-                        </a>
+                          CASE STUDY
+                        </button>
+                        {!!project.projectlink && (
+                          <a
+                            href={project.projectlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="px-5 py-2.5 rounded-full border border-white/20 bg-transparent text-neutral-300 hover:text-white hover:border-white/50 hover:bg-white/10 backdrop-blur-sm text-xs tracking-[0.2em] font-bold transition-all flex items-center gap-1.5"
+                          >
+                            LIVE SITE <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -154,9 +196,33 @@ export default function WorksClient() {
                       </p>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight mb-8 leading-tight">
+                    <h2
+                      onClick={() => router.push(project.link)}
+                      className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight mb-4 leading-tight cursor-pointer hover:text-neutral-300 transition-colors"
+                    >
                       {project.title}
                     </h2>
+
+                    {/* Highlighted Actions: Case Study & Live Site Link */}
+                    <div className="mb-8 flex flex-wrap gap-3 items-center">
+                      <button
+                        onClick={() => router.push(project.link)}
+                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/80 hover:text-white transition-colors border border-white/15 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10"
+                      >
+                        Read Case Study <ArrowRight className="w-4 h-4" />
+                      </button>
+                      {!!project.projectlink && (
+                        <a
+                          href={project.projectlink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-xs font-mono text-neutral-300 hover:text-white transition-all bg-transparent border border-white/20 hover:border-white/50 hover:bg-white/5 px-4 py-2 rounded-full"
+                        >
+                          <span>LIVE SITE</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                    </div>
 
                     <p className="text-neutral-300 leading-relaxed text-lg md:text-xl mb-10 max-w-lg border-l-2 border-white/10 pl-6 py-2">
                       {project.desc}
@@ -179,12 +245,12 @@ export default function WorksClient() {
                     </div>
 
                     <div className="mt-12 lg:hidden">
-                      <a
-                        href={project.link}
+                      <button
+                        onClick={() => router.push(project.link)}
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-sm tracking-widest font-bold bg-white/5"
                       >
                         EXPLORE <ArrowRight className="w-4 h-4" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
