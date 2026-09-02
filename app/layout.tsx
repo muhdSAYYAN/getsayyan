@@ -189,6 +189,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { inter, mono, nasalization, quentine } from "@/app/font";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/commonui/SmoothScrollProvider";
 import { Background } from "@/components/commonui/Background";
@@ -199,41 +200,47 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
+// ── SITE-WIDE CONSTANTS ───────────────────────────────────────────────────
+const SITE_URL = "https://getsayyan.com";
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const PHONE = "+918086232426";
+const EMAIL = "sayyanelayodan@gmail.com";
+const FOUNDER_NAME = "Muhammed Sayyan";
+
+const PRIMARY_DESCRIPTION =
+  "Sayyan is a professional freelance web developer in Malappuram, Manjeri, Areekode, Kerala, offering React, Next.js, MERN Stack & Odoo ERP development for businesses, startups, and students — serving Kerala, India & GCC.";
+
+// ── METADATA ──────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: "Sayyan | Web Developer in Malappuram, Kerala",
+    default: "Sayyan | Freelance Web Developer in Malappuram, Kerala",
     template: "%s | Sayyan",
   },
-  description:
-    "Freelance full-stack web developer based in Malappuram, Kerala. Custom React, Next.js and MERN Stack websites — budget-friendly, fixed-fee pricing.",
+  description: PRIMARY_DESCRIPTION,
   keywords: ALL_TARGET_KEYWORDS,
-  authors: [{ name: "Sayyan", url: "https://getsayyan.com" }],
+  authors: [{ name: "Sayyan", url: SITE_URL }],
   creator: "Sayyan Web Solutions",
   publisher: "Sayyan Web Solutions",
 
   alternates: {
-    canonical: "https://getsayyan.com",
+    canonical: SITE_URL,
   },
 
   openGraph: {
-    title:
-      "Sayyan | Professional Freelance Web Developer in Malappuram, Kerala",
-    description:
-      "Top-rated freelance web developer in Malappuram, Manjeri, Areekode, Kerala. Expert in React, Next.js, MERN Stack, Odoo ERP. High-quality websites for businesses, startups & students. Serving India & GCC.",
-    url: "https://getsayyan.com",
+    title: "Sayyan | Freelance Web Developer in Malappuram, Kerala",
+    description: PRIMARY_DESCRIPTION,
+    url: SITE_URL,
     siteName: "Sayyan – Freelance Developer",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://getsayyan.com/og-image.jpg",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Sayyan – Professional Freelance Web Developer in Malappuram, Kerala",
@@ -243,11 +250,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "Sayyan | Professional Freelance Web Developer in Malappuram, Kerala",
-    description:
-      "Professional freelance web developer in Malappuram, Kerala. React, Next.js, MERN Stack & Odoo. Serving Kerala, India & GCC.",
-    images: ["https://getsayyan.com/og-image.jpg"],
+    title: "Sayyan | Freelance Web Developer in Malappuram, Kerala",
+    description: PRIMARY_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 
   robots: {
@@ -262,20 +267,22 @@ export const metadata: Metadata = {
     },
   },
 
-  metadataBase: new URL("https://getsayyan.com"),
+  metadataBase: new URL(SITE_URL),
 };
 
-// ── STRUCTURED DATA ──────────────────────────────────────────────────────────
+// ── STRUCTURED DATA (single source of truth per entity type) ──────────────
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Sayyan",
-  url: "https://getsayyan.com",
+  alternateName: FOUNDER_NAME,
+  url: SITE_URL,
   jobTitle: "Freelance Web Developer & Software Consultant",
-  description:
-    "Professional freelance web developer in Malappuram, Manjeri, Kerala. High-quality React, Next.js, MERN Stack, Odoo ERP development for small businesses, startups, and students.",
-  image: "https://getsayyan.com/og-image.jpg",
+  description: PRIMARY_DESCRIPTION,
+  image: OG_IMAGE,
+  email: EMAIL,
+  telephone: PHONE,
   areaServed: [
     "Malappuram",
     "Manjeri",
@@ -287,14 +294,21 @@ const personSchema = {
     "Ponnani",
     "Calicut",
     "Kozhikode",
+    "Kochi",
     "Kerala",
     "Bangalore",
     "Hyderabad",
     "Chennai",
     "India",
     "Dubai",
+    "Abu Dhabi",
     "UAE",
+    "Riyadh",
     "Saudi Arabia",
+    "Qatar",
+    "Kuwait",
+    "Oman",
+    "Bahrain",
   ],
   knowsAbout: [
     "Web Development",
@@ -321,13 +335,20 @@ const personSchema = {
   ],
 };
 
+// Single authoritative business schema — merged LocalBusiness + ProfessionalService
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Sayyan – Freelance Web Developer",
-  url: "https://getsayyan.com",
-  description:
-    "Professional freelance web developer in Malappuram, Manjeri, Areekode, Kerala. High-quality websites, React apps, Next.js, MERN Stack, and Odoo ERP solutions.",
+  "@type": "ProfessionalService",
+  "@id": `${SITE_URL}/#business`,
+  name: "Sayyan Web Solutions",
+  url: SITE_URL,
+  image: OG_IMAGE,
+  description: PRIMARY_DESCRIPTION,
+  telephone: PHONE,
+  email: EMAIL,
+  priceRange: "₹₹",
+  founder: { "@type": "Person", name: FOUNDER_NAME },
+
   address: {
     "@type": "PostalAddress",
     addressLocality: "Malappuram",
@@ -335,21 +356,41 @@ const localBusinessSchema = {
     addressCountry: "IN",
     postalCode: "676505",
   },
+
   geo: {
     "@type": "GeoCoordinates",
     latitude: "11.0510",
     longitude: "76.0711",
   },
+
   areaServed: [
     { "@type": "City", name: "Malappuram" },
     { "@type": "City", name: "Manjeri" },
     { "@type": "City", name: "Areekode" },
     { "@type": "City", name: "Perinthalmanna" },
+    { "@type": "City", name: "Kondotty" },
+    { "@type": "City", name: "Tirur" },
+    { "@type": "City", name: "Kottakkal" },
+    { "@type": "City", name: "Ponnani" },
     { "@type": "City", name: "Calicut" },
     { "@type": "City", name: "Kozhikode" },
+    { "@type": "City", name: "Kochi" },
     { "@type": "State", name: "Kerala" },
+    { "@type": "City", name: "Bangalore" },
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "City", name: "Chennai" },
     { "@type": "Country", name: "India" },
+    { "@type": "City", name: "Dubai" },
+    { "@type": "City", name: "Abu Dhabi" },
+    { "@type": "Country", name: "United Arab Emirates" },
+    { "@type": "City", name: "Riyadh" },
+    { "@type": "Country", name: "Saudi Arabia" },
+    { "@type": "Country", name: "Qatar" },
+    { "@type": "Country", name: "Kuwait" },
+    { "@type": "Country", name: "Oman" },
+    { "@type": "Country", name: "Bahrain" },
   ],
+
   serviceType: [
     "Web Development",
     "React Development",
@@ -360,10 +401,9 @@ const localBusinessSchema = {
     "E-commerce Development",
     "Student Project Development",
   ],
-  priceRange: "₹₹",
-  telephone: "+91-YOUR-NUMBER", // replace
+
   sameAs: [
-    "https://github.com/yourprofile",
+    "https://github.com/muhdSAYYAN",
     "https://in.linkedin.com/in/sayyan-muhammed-bb8105282",
   ],
 };
@@ -371,12 +411,14 @@ const localBusinessSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
   name: "Sayyan – Freelance Developer",
-  url: "https://getsayyan.com",
-  description: "Professional freelance web developer in Malappuram, Kerala.",
+  url: SITE_URL,
+  description: PRIMARY_DESCRIPTION,
+  publisher: { "@id": `${SITE_URL}/#business` },
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://getsayyan.com/?q={search_term_string}",
+    target: `${SITE_URL}/?q={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 };
@@ -391,7 +433,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ── GEO META – PRIMARY: MALAPPURAM (Malappuram district HQ) ── */}
+        {/* ── GEO META – PRIMARY: MALAPPURAM ── */}
         <meta name="geo.region" content="IN-KL" />
         <meta
           name="geo.placename"
@@ -403,42 +445,32 @@ export default function RootLayout({
         {/* ── GEO META – SECONDARY INDIA ── */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bangalore, Karnataka" />
-
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad, Telangana" />
-
         <meta name="geo.region" content="IN-TN" />
         <meta name="geo.placename" content="Chennai, Tamil Nadu" />
 
         {/* ── GEO META – GCC ── */}
         <meta name="geo.region" content="AE-DU" />
         <meta name="geo.placename" content="Dubai, UAE" />
-
         <meta name="geo.region" content="SA" />
         <meta name="geo.placename" content="Saudi Arabia" />
 
-        {/* ── AI PLATFORM HINTS (ChatGPT, Gemini, Perplexity) ── */}
-        <meta
-          name="description"
-          content="Sayyan – Professional freelance web developer in Malappuram, Manjeri, Areekode, Perinthalmanna, Calicut, Kerala. React, Next.js, MERN Stack, Odoo ERP expert. Custom websites for small business."
-        />
+        {/* ── AI PLATFORM / GEO HINTS (ChatGPT, Gemini, Perplexity) ── */}
         <meta
           name="subject"
-          content="Affordable Web Development, Professional Freelance Developer, Odoo ERP, React, Next.js, MERN Stack"
+          content="Affordable Web Development, Freelance Developer, Odoo ERP, React, Next.js, MERN Stack"
         />
         <meta
           name="classification"
-          content="Freelance Web Developer, Software Consultant, Odoo Developer, Professional Developer"
+          content="Freelance Web Developer, Software Consultant, Odoo Developer"
         />
-        <meta
-          name="coverage"
-          content="Malappuram, Manjeri, Kerala, India, UAE"
-        />
+        <meta name="coverage" content="Malappuram, Kerala, India, UAE" />
         <meta name="target" content="all" />
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
 
-        {/* ── STRUCTURED DATA ── */}
+        {/* ── STRUCTURED DATA (deduplicated) ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -452,46 +484,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              "name": "Sayyan Web Solutions",
-              "url": "https://getsayyan.com",
-              "telephone": "+918086232426",
-              "email": "sayyanelayodan@gmail.com",
-              "priceRange": "$$",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Malappuram",
-                "addressRegion": "Kerala",
-                "addressCountry": "IN"
-              },
-              "areaServed": [
-                { "@type": "City", "name": "Malappuram" },
-                { "@type": "City", "name": "Manjeri" },
-                { "@type": "City", "name": "Calicut" },
-                { "@type": "City", "name": "Kozhikode" },
-                { "@type": "City", "name": "Kochi" },
-                { "@type": "State", "name": "Kerala" },
-                { "@type": "Country", "name": "India" },
-                { "@type": "City", "name": "Dubai" },
-                { "@type": "City", "name": "Abu Dhabi" },
-                { "@type": "Country", "name": "United Arab Emirates" },
-                { "@type": "City", "name": "Riyadh" },
-                { "@type": "Country", "name": "Saudi Arabia" },
-                { "@type": "Country", "name": "Qatar" },
-                { "@type": "Country", "name": "Kuwait" },
-                { "@type": "Country", "name": "Oman" },
-                { "@type": "Country", "name": "Bahrain" }
-              ],
-              "keywords": "web developer Malappuram, best web developer Malappuram, budget friendly web developer Malappuram, web developer Manjeri, best web developer Kerala, best web developer Calicut, best web developer Kozhikode, web developer GCC, best web developer UAE, best web developer Abu Dhabi, budget friendly web developer Kerala",
-              "founder": { "@type": "Person", "name": "Muhammed Sayyan" }
-            })
-          }}
         />
       </head>
 
