@@ -5,6 +5,7 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { GsapFade } from "@/components/commonui/GsapFade";
 import ContactSection from "@/components/commonui/ContactSection";
+import LocationSection from "@/components/commonui/LocationSection";
 import {
   FileText,
   Search,
@@ -17,27 +18,27 @@ const steps = [
   {
     title: "You Fill Out the Form",
     desc: "Share your project details and requirements.",
-    icon: <FileText className="w-6 h-6 text-blue-400" />,
+    icon: <FileText className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "I Review Your Needs",
     desc: "Analyze your requirements and prepare a solution.",
-    icon: <Search className="w-6 h-6 text-purple-400" />,
+    icon: <Search className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "We Schedule a Call",
     desc: "Discuss details and clarify any questions.",
-    icon: <Calendar className="w-6 h-6 text-emerald-400" />,
+    icon: <Calendar className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "Detailed Proposal",
     desc: "Complete project plan with timeline and pricing.",
-    icon: <ClipboardList className="w-6 h-6 text-orange-400" />,
+    icon: <ClipboardList className="w-6 h-6 text-slate-300" />,
   },
   {
     title: "We Start Building!",
     desc: "Turn your vision into reality.",
-    icon: <Rocket className="w-6 h-6 text-pink-400" />,
+    icon: <Rocket className="w-6 h-6 text-slate-300" />,
   },
 ];
 
@@ -63,6 +64,11 @@ export default function ContactPageClient() {
           >
             <ContactSection />
           </Suspense>
+        </div>
+
+        {/* Office Location & Google Maps Section */}
+        <div className="w-full border-t border-white/10">
+          <LocationSection />
         </div>
 
         {/* What Happens Next? */}

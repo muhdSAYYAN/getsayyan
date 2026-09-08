@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { Mail, Phone, ArrowUpRight, ChevronDown, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Phone, ArrowUpRight, ChevronDown, Linkedin, MessageCircle, MapPin } from "lucide-react";
 import { selfData } from "../Constants/SelfData";
 import { GsapFade } from "./GsapFade";
 
@@ -153,6 +153,19 @@ export default function ContactSection() {
               >
                 <Linkedin size={20} className="text-slate-300 shrink-0" />
                 <span>Sayyan Muhammed</span>
+              </a>
+
+              <a
+                href={selfData.current_location.maps_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 text-neutral-300 hover:text-white transition-colors group"
+              >
+                <MapPin size={20} className="text-slate-300 shrink-0 mt-0.5 group-hover:text-white transition-colors" />
+                <span className="leading-snug">
+                  {selfData.current_location.address}, {selfData.current_location.city}, {selfData.current_location.state}{" "}
+                  {selfData.current_location.postalCode}
+                </span>
               </a>
             </div>
 

@@ -12,23 +12,49 @@ export const metadata: Metadata = {
   keywords: ALL_TARGET_KEYWORDS,
   alternates: { canonical: "https://getsayyan.com/web-developer-kerala" },
   openGraph: {
-    title: "Best Web Developer in Kerala | Calicut, Kozhikode",
+    title: "Best Web Developer in Kerala | Calicut, Kozhikode, Malappuram",
     description:
       "Affordable, custom web development for businesses across Kerala — Calicut, Kozhikode, Malappuram and Manjeri. Fixed-fee pricing, no templates.",
     url: "https://getsayyan.com/web-developer-kerala",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Web Developer in Kerala | Sayyan",
+    description:
+      "Custom web applications and business websites built for Kerala businesses.",
   },
 };
 
-const breadcrumbSchema = {
+const pageSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Web Developer Kerala",
-      item: "https://getsayyan.com/web-developer-kerala",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Web Developer Kerala",
+          item: "https://getsayyan.com/web-developer-kerala",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Custom Web Development in Kerala",
+      serviceType: "Freelance Web Development",
+      description:
+        "Affordable, custom web development for businesses across Kerala — Calicut, Kozhikode, Malappuram and Manjeri. Fixed-fee pricing, no templates.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: ["Kerala", "Malappuram", "Kozhikode", "Calicut", "Manjeri", "India"],
     },
   ],
 };
@@ -38,7 +64,7 @@ export default function WebDeveloperKeralaPage() {
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <Navbar />
 

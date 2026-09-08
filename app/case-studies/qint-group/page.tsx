@@ -16,13 +16,61 @@ export const metadata: Metadata = {
     title: "QINT Group Case Study — Muhammed Sayyan E",
     description:
       "Precision engineering platform for MEP systems, TAB, acoustic spray, and building handover management in Saudi Arabia.",
-    url: "https://getsayyan.com/case-studies/qint-group",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "QINT Group Case Study — Sayyan",
+    description:
+      "Precision engineering platform for MEP systems, TAB, and building handover management in Saudi Arabia.",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "QINT Group",
+          item: "https://getsayyan.com/case-studies/qint-group",
+        },
+      ],
+    },
+    {
+      "@type": "TechArticle",
+      headline: "QINT Group Case Study — MEP Testing, HVAC & Handover Management Platform",
+      description:
+        "Case study of QINT Group KSA's engineering platform built with Next.js, TypeScript, and Tailwind CSS for MEP testing and handover management.",
+      image: "https://getsayyan.com/images/quint.jpeg",
+      author: {
+        "@type": "Person",
+        name: "Muhammed Sayyan",
+        url: "https://getsayyan.com",
+      },
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "Sayyan Web Solutions",
+        url: "https://getsayyan.com",
+      },
+    },
+  ],
 };
 
 export default function QintGroupCaseStudy() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">

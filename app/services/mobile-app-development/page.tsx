@@ -3,20 +3,80 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Services — Muhammed Sayyan E",
+  title: "Cross-Platform Mobile App Development Services — Sayyan | Kerala",
   description:
-    "Cross-platform mobile application development for iOS and Android using React Native and REST API backends.",
+    "Cross-platform mobile application development for iOS and Android using React Native and REST API backends. Fast, scalable, and native-feeling.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "mobile app development Kerala",
+    "React Native developer Malappuram",
+    "iOS and Android app development",
+    "hire React Native developer India",
+  ],
+  alternates: { canonical: "https://getsayyan.com/services/mobile-app-development" },
+  openGraph: {
+    title: "Mobile App Development Services — Sayyan",
+    description:
+      "Cross-platform mobile application development for iOS and Android using React Native and REST API backends.",
+    url: "https://getsayyan.com/services/mobile-app-development",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile App Development Services — Sayyan",
+    description:
+      "Cross-platform iOS and Android apps built with React Native for startups and enterprises.",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://getsayyan.com/services" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Mobile App Development",
+          item: "https://getsayyan.com/services/mobile-app-development",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Mobile App Development",
+      serviceType: "React Native Mobile Application Development",
+      description:
+        "Cross-platform mobile applications for iOS and Android built with React Native, offline synchronization, and seamless backend API integration.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: ["Kerala", "India", "United Arab Emirates", "Saudi Arabia"],
+    },
+  ],
 };
 
 export default function MobileAppServicePage() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
-        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8">
+        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8 font-mono">
           <Link href="/services" className="hover:text-white transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/80">Mobile App Development</span>
