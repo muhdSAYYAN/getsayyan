@@ -5,15 +5,80 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 export const metadata: Metadata = {
-  title: "Velota Analytics Dashboard Case Study — Muhammed Sayyan E",
+  title: "Velota Analytics Dashboard Case Study — Sayyan | Data Visualization",
   description:
-    "Case study of Velota analytics dashboard platform built with Next.js, TypeScript, and GSAP micro-animations.",
+    "Case study of Velota analytics dashboard platform built with Next.js, TypeScript, and GSAP micro-animations for high-speed data visualization.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "dashboard development case study",
+    "Next.js analytics dashboard",
+    "data visualization developer Kerala",
+    "GSAP web development India",
+  ],
+  alternates: { canonical: "https://getsayyan.com/case-studies/velota" },
+  openGraph: {
+    title: "Velota Analytics Dashboard Case Study — Sayyan",
+    description:
+      "High-speed analytics portal and custom dashboard engineered for real-time data visualization.",
+    url: "https://getsayyan.com/case-studies/velota",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Velota Analytics Dashboard Case Study — Sayyan",
+    description:
+      "Analytical dashboard platform built with Next.js, TypeScript, and GSAP.",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Velota",
+          item: "https://getsayyan.com/case-studies/velota",
+        },
+      ],
+    },
+    {
+      "@type": "TechArticle",
+      headline: "Velota Analytics Dashboard Case Study — High-Speed Portal",
+      description:
+        "Case study of Velota analytics dashboard platform built with Next.js, TypeScript, and GSAP micro-animations.",
+      image: "https://getsayyan.com/images/velota-dashboard-nextjs-typescript.jpeg",
+      author: {
+        "@type": "Person",
+        name: "Muhammed Sayyan",
+        url: "https://getsayyan.com",
+      },
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "Sayyan Web Solutions",
+        url: "https://getsayyan.com",
+      },
+    },
+  ],
 };
 
 export default function VelotaCaseStudy() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">

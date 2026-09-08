@@ -12,23 +12,59 @@ export const metadata: Metadata = {
   keywords: ALL_TARGET_KEYWORDS,
   alternates: { canonical: "https://getsayyan.com/hire-web-developer-gcc" },
   openGraph: {
-    title: "Best Web Developer for GCC | UAE, Abu Dhabi",
+    title: "Best Web Developer for GCC | UAE, Saudi Arabia, Dubai",
     description:
       "Remote web development and full-stack MERN services for businesses across the GCC — UAE, Abu Dhabi, Saudi Arabia and beyond.",
     url: "https://getsayyan.com/hire-web-developer-gcc",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hire Web Developer for GCC | Sayyan",
+    description:
+      "Remote web development and engineering platforms for businesses in UAE, Saudi Arabia, Qatar, Kuwait & Oman.",
   },
 };
 
-const breadcrumbSchema = {
+const pageSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Hire Developer GCC",
-      item: "https://getsayyan.com/hire-web-developer-gcc",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Hire Developer GCC",
+          item: "https://getsayyan.com/hire-web-developer-gcc",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Remote Web Development Services for GCC",
+      serviceType: "Freelance Software Development",
+      description:
+        "Remote web development and full-stack MERN services for businesses across the GCC — UAE, Abu Dhabi, Saudi Arabia, Qatar, Kuwait, Oman, and Bahrain.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar",
+        "Kuwait",
+        "Oman",
+        "Bahrain",
+        "Dubai",
+        "Abu Dhabi",
+        "Riyadh",
+      ],
     },
   ],
 };
@@ -38,7 +74,7 @@ export default function HireWebDeveloperGccPage() {
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <Navbar />
 

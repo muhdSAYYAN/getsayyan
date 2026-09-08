@@ -341,6 +341,7 @@ const localBusinessSchema = {
   "@type": "ProfessionalService",
   "@id": `${SITE_URL}/#business`,
   name: "Sayyan Web Solutions",
+  alternateName: "Sayyan | Web Developer in Malappuram",
   url: SITE_URL,
   image: OG_IMAGE,
   description: PRIMARY_DESCRIPTION,
@@ -351,17 +352,21 @@ const localBusinessSchema = {
 
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Malappuram",
+    streetAddress: "Near Kacherippadi Stand, Kacherippadi",
+    addressLocality: "Manjeri",
     addressRegion: "Kerala",
     addressCountry: "IN",
-    postalCode: "676505",
+    postalCode: "676123",
   },
 
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "11.0510",
-    longitude: "76.0711",
+    latitude: "11.1104106",
+    longitude: "76.1205454",
   },
+
+  hasMap:
+    "https://www.google.com/maps/place/Sayyan+%7C+Web+Developer+in+Malappuram/@11.0618617,76.0683917,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!3m5!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!8m2!3d11.1104106!4d76.1205454!16s%2Fg%2F11n58h_cz7",
 
   areaServed: [
     { "@type": "City", name: "Malappuram" },
@@ -405,6 +410,7 @@ const localBusinessSchema = {
   sameAs: [
     "https://github.com/muhdSAYYAN",
     "https://in.linkedin.com/in/sayyan-muhammed-bb8105282",
+    "https://www.google.com/maps/place/Sayyan+%7C+Web+Developer+in+Malappuram/@11.0618617,76.0683917,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!3m5!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!8m2!3d11.1104106!4d76.1205454!16s%2Fg%2F11n58h_cz7",
   ],
 };
 
@@ -433,14 +439,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ── GEO META – PRIMARY: MALAPPURAM ── */}
+        {/* ── GEO META – PRIMARY: MANJERI, MALAPPURAM ── */}
         <meta name="geo.region" content="IN-KL" />
         <meta
           name="geo.placename"
-          content="Malappuram, Manjeri, Areekode, Perinthalmanna, Calicut, Kerala"
+          content="Manjeri, Malappuram, Kerala, India"
         />
-        <meta name="geo.position" content="11.0510;76.0711" />
-        <meta name="ICBM" content="11.0510, 76.0711" />
+        <meta name="geo.position" content="11.1104106;76.1205454" />
+        <meta name="ICBM" content="11.1104106, 76.1205454" />
 
         {/* ── GEO META – SECONDARY INDIA ── */}
         <meta name="geo.region" content="IN-KA" />

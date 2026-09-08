@@ -7,17 +7,51 @@ import { ArrowRight } from "lucide-react";
 import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Sayyan — Web Developer, Kerala",
+  title: "Case Studies | Web Development Projects — Sayyan | Kerala & GCC",
   description:
-    "Recent projects delivered for clients in Kerala and the GCC.",
-  keywords: ALL_TARGET_KEYWORDS,
+    "Real production web applications, medical EMR platforms, POS dashboards, and e-commerce systems delivered for clients across India and the GCC.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "web development case studies",
+    "React project portfolio Kerala",
+    "full stack case studies India",
+  ],
   alternates: { canonical: "https://getsayyan.com/case-studies" },
   openGraph: {
-    title: "Case Studies | Sayyan — Web Developer, Kerala",
+    title: "Case Studies | Web Development Projects — Sayyan",
     description:
-      "Recent projects delivered for clients in Kerala and the GCC.",
+      "Real production web applications, medical EMR platforms, POS dashboards, and e-commerce systems delivered for clients across India and the GCC.",
     url: "https://getsayyan.com/case-studies",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies | Sayyan — Web Developer",
+    description:
+      "Explore real web application and e-commerce case studies delivered by Sayyan.",
+  },
+};
+
+const caseStudiesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      name: "Case Studies and Web Development Portfolio",
+      description:
+        "Production systems shipped by Sayyan including EMR healthcare portals, POS dashboards, and luxury e-commerce platforms.",
+      url: "https://getsayyan.com/case-studies",
+    },
+  ],
 };
 
 const caseStudies = [
@@ -80,6 +114,10 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 py-12 flex-grow w-full">

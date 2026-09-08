@@ -3,20 +3,80 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Warehouse & POS Systems — Muhammed Sayyan E",
+  title: "Warehouse Management & POS Systems — Sayyan | Kerala",
   description:
-    "Tailored inventory management software, stock dispatch tracking, and custom POS billing systems.",
+    "Tailored inventory management software, stock dispatch tracking, and custom POS billing systems built with React, Node.js, and SQL/MongoDB.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "POS software developer Kerala",
+    "warehouse management software development",
+    "custom retail POS system India",
+    "inventory management system developer",
+  ],
+  alternates: { canonical: "https://getsayyan.com/services/warehouse-management-systems" },
+  openGraph: {
+    title: "Warehouse Management & POS Systems — Sayyan",
+    description:
+      "Tailored inventory management software, stock dispatch tracking, and custom POS billing systems.",
+    url: "https://getsayyan.com/services/warehouse-management-systems",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Warehouse & POS Systems — Sayyan",
+    description:
+      "Custom point-of-sale and warehouse management software for retail and logistics businesses.",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://getsayyan.com/services" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Warehouse & POS Systems",
+          item: "https://getsayyan.com/services/warehouse-management-systems",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Warehouse & POS Systems Development",
+      serviceType: "Enterprise Software Development",
+      description:
+        "Tailored inventory management software, real-time stock dispatch engines, barcode integration, and custom point-of-sale billing platforms.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: ["Kerala", "India", "United Arab Emirates", "Saudi Arabia"],
+    },
+  ],
 };
 
 export default function WarehouseManagementServicePage() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
-        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8">
+        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8 font-mono">
           <Link href="/services" className="hover:text-white transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/80">Warehouse &amp; POS Systems</span>

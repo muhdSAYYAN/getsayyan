@@ -3,20 +3,80 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "E-Commerce Platform Development — Muhammed Sayyan E",
+  title: "E-Commerce Platform Development Services — Sayyan | Kerala",
   description:
-    "Custom high-converting e-commerce storefronts, shopping carts, multi-currency support, and payment gateway integrations.",
+    "Custom high-converting e-commerce storefronts, shopping carts, multi-currency support, and payment gateway integrations built with Next.js and React.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "ecommerce website development Kerala",
+    "Next.js ecommerce developer",
+    "custom online store development Malappuram",
+    "payment gateway integration Kerala",
+  ],
+  alternates: { canonical: "https://getsayyan.com/services/ecommerce-development" },
+  openGraph: {
+    title: "E-Commerce Platform Development Services — Sayyan",
+    description:
+      "Custom high-converting e-commerce storefronts, shopping carts, multi-currency support, and payment gateway integrations.",
+    url: "https://getsayyan.com/services/ecommerce-development",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "E-Commerce Platform Development Services — Sayyan",
+    description:
+      "High-speed online shopping experiences built with Next.js, Stripe, and Razorpay.",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://getsayyan.com/services" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "E-Commerce Platforms",
+          item: "https://getsayyan.com/services/ecommerce-development",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "E-Commerce Platform Development",
+      serviceType: "E-Commerce Web Development",
+      description:
+        "Custom online shopping experiences, multi-currency catalogs, streamlined checkout flows, and secure payment integrations built for high conversion.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: ["Kerala", "India", "United Arab Emirates", "Saudi Arabia"],
+    },
+  ],
 };
 
 export default function EcommerceServicePage() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
-        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8">
+        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8 font-mono">
           <Link href="/services" className="hover:text-white transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/80">E-Commerce Platforms</span>

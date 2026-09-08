@@ -3,20 +3,80 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Academic & Final-Year CS Projects — Muhammed Sayyan E",
+  title: "Academic & Final-Year CS Project Mentorship — Sayyan | Kerala",
   description:
-    "1-on-1 development guidance, code architecture mentorship, and logic explanation for MCA, BCA, B.Tech, and CS students.",
+    "1-on-1 development guidance, code architecture mentorship, and logic explanation for MCA, BCA, B.Tech, and CS students in Kerala & India.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "final year project guidance Kerala",
+    "MCA project guidance Malappuram",
+    "BTech CS project help Kerala",
+    "academic project mentorship India",
+  ],
+  alternates: { canonical: "https://getsayyan.com/services/academic-projects" },
+  openGraph: {
+    title: "Academic & Final-Year CS Project Mentorship — Sayyan",
+    description:
+      "1-on-1 development guidance, code architecture mentorship, and logic explanation for MCA, BCA, B.Tech, and CS students.",
+    url: "https://getsayyan.com/services/academic-projects",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Academic & Final-Year CS Projects — Sayyan",
+    description:
+      "Hands-on mentorship, code architecture guidance, and viva prep for CS students.",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://getsayyan.com/services" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Academic Projects",
+          item: "https://getsayyan.com/services/academic-projects",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Academic & Final-Year CS Project Mentorship",
+      serviceType: "Technical Mentorship & Project Guidance",
+      description:
+        "Hands-on mentorship, 1-on-1 code architecture guidance, and full-stack logic explanations designed to help computer science students ace final-year project vivas and practical exams.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: ["Kerala", "India"],
+    },
+  ],
 };
 
 export default function AcademicProjectsServicePage() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
-        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8">
+        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8 font-mono">
           <Link href="/services" className="hover:text-white transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/80">Academic Projects</span>

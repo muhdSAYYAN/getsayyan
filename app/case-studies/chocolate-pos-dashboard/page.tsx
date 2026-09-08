@@ -5,15 +5,80 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 export const metadata: Metadata = {
-  title: "Chocolate POS Dashboard Case Study — Muhammed Sayyan E",
+  title: "Chocolate POS Dashboard Case Study — Sayyan | Retail POS Solution",
   description:
-    "Case study of Chocolate POS dashboard system built with React, Node.js, Express, and MongoDB for retail checkout and inventory.",
+    "Case study of Chocolate POS dashboard system built with React, Node.js, Express, and MongoDB for high-speed retail checkout and inventory tracking.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "POS dashboard case study",
+    "retail POS development",
+    "React POS application",
+    "Node.js inventory dashboard",
+  ],
+  alternates: { canonical: "https://getsayyan.com/case-studies/chocolate-pos-dashboard" },
+  openGraph: {
+    title: "Chocolate POS Dashboard Case Study — Sayyan",
+    description:
+      "Case study of Chocolate POS dashboard system built with React, Node.js, Express, and MongoDB for retail checkout and inventory.",
+    url: "https://getsayyan.com/case-studies/chocolate-pos-dashboard",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chocolate POS Dashboard Case Study — Sayyan",
+    description:
+      "Point-of-sale system and retail dashboard built with React and Node.js.",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Chocolate POS",
+          item: "https://getsayyan.com/case-studies/chocolate-pos-dashboard",
+        },
+      ],
+    },
+    {
+      "@type": "TechArticle",
+      headline: "Chocolate POS Dashboard Case Study — Retail POS System",
+      description:
+        "Case study of Chocolate POS dashboard system built with React, Node.js, Express, and MongoDB for retail checkout and inventory.",
+      image: "https://getsayyan.com/images/chocolate-pos-dashboard-react-nodejs.jpeg",
+      author: {
+        "@type": "Person",
+        name: "Muhammed Sayyan",
+        url: "https://getsayyan.com",
+      },
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "Sayyan Web Solutions",
+        url: "https://getsayyan.com",
+      },
+    },
+  ],
 };
 
 export default function ChocolatePosCaseStudy() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">

@@ -3,20 +3,81 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Web Application Development Services — Muhammed Sayyan E",
+  title: "Web Application Development Services — Sayyan | Kerala & GCC",
   description:
-    "Custom, scalable, and high-performance web applications built using React.js, Next.js, Node.js, and MongoDB.",
+    "Custom, scalable, and high-performance web applications built using React.js, Next.js, Node.js, and MongoDB. Fast page loads, secure backends, and responsive design.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "web application development Kerala",
+    "custom React web development",
+    "Next.js web developer Manjeri",
+    "full stack web development Calicut",
+    "hire web app developer India",
+  ],
+  alternates: { canonical: "https://getsayyan.com/services/web-development" },
+  openGraph: {
+    title: "Web Application Development Services — Sayyan",
+    description:
+      "Custom, scalable, and high-performance web applications built using React.js, Next.js, Node.js, and MongoDB.",
+    url: "https://getsayyan.com/services/web-development",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Application Development Services — Sayyan",
+    description:
+      "Custom, scalable web applications built with Next.js, React, and modern cloud databases.",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://getsayyan.com/services" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Web Application Development",
+          item: "https://getsayyan.com/services/web-development",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Web Application Development",
+      serviceType: "Full Stack Web Development",
+      description:
+        "End-to-end full-stack web application development built with React, Next.js, Node.js, and modern cloud databases for high availability and performance.",
+      provider: {
+        "@type": "ProfessionalService",
+        "@id": "https://getsayyan.com/#business",
+        name: "Sayyan Web Solutions",
+      },
+      areaServed: ["Kerala", "India", "United Arab Emirates", "Saudi Arabia"],
+    },
+  ],
 };
 
 export default function WebDevelopmentServicePage() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
-        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8">
+        <div className="flex items-center gap-2 text-xs tracking-widest text-white/40 uppercase mb-8 font-mono">
           <Link href="/services" className="hover:text-white transition-colors">Services</Link>
           <span>/</span>
           <span className="text-white/80">Web Application Development</span>

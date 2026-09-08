@@ -16,13 +16,61 @@ export const metadata: Metadata = {
     title: "Vazhayil Natural Case Study — Muhammed Sayyan E",
     description:
       "Biological solutions for decentralised organic waste management built with Next.js and Tailwind CSS.",
-    url: "https://getsayyan.com/case-studies/vazhayil-natural",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vazhayil Natural Case Study — Sayyan",
+    description:
+      "Biological solutions for decentralised organic waste management built with Next.js and Tailwind CSS.",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Vazhayil Natural",
+          item: "https://getsayyan.com/case-studies/vazhayil-natural",
+        },
+      ],
+    },
+    {
+      "@type": "TechArticle",
+      headline: "Vazhayil Natural Case Study — Decentralized Organic Waste Management Platform",
+      description:
+        "Case study of Vazhayil Natural's eco-tech platform built with Next.js, TypeScript, and Tailwind CSS for biological waste management solutions.",
+      image: "https://getsayyan.com/images/vazhayilnatural.webp",
+      author: {
+        "@type": "Person",
+        name: "Muhammed Sayyan",
+        url: "https://getsayyan.com",
+      },
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "Sayyan Web Solutions",
+        url: "https://getsayyan.com",
+      },
+    },
+  ],
 };
 
 export default function VazhayilNaturalCaseStudy() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">

@@ -7,9 +7,19 @@ export const selfData = {
   devname: "SAYYAN",
 
   current_location: {
-    city: "Malappuram",
+    address: "Near Kacherippadi Stand, Kacherippadi",
+    city: "Manjeri",
+    district: "Malappuram",
     state: "Kerala",
+    postalCode: "676123",
     country: "India",
+    full_address: "Near Kacherippadi Stand, Kacherippadi, Manjeri, Kerala 676123, India",
+    maps_url:
+      "https://www.google.com/maps/place/Sayyan+%7C+Web+Developer+in+Malappuram/@11.0618617,76.0683917,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!3m5!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!8m2!3d11.1104106!4d76.1205454!16s%2Fg%2F11n58h_cz7",
+    embed_url:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.5029193231367!2d76.11797047481105!3d11.110410589059734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b1319521a0b%3A0x5cff8bca110d3c85!2sSayyan%20%7C%20Web%20Developer%20in%20Malappuram!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
+    latitude: "11.1104106",
+    longitude: "76.1205454",
   },
 
   email: "sayyanelayodan@gmail.com",

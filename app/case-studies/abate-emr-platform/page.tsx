@@ -5,15 +5,80 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 export const metadata: Metadata = {
-  title: "Abate AS EMR Platform Case Study — Muhammed Sayyan E",
+  title: "Abate AS EMR Platform Case Study — Sayyan | Healthcare System",
   description:
-    "Case study of Abate AS clinical Electronic Medical Records (EMR) platform built with React, Node.js, and PostgreSQL for clinical operations.",
+    "Case study of Abate AS clinical Electronic Medical Records (EMR) platform built with React, Node.js, and PostgreSQL for patient charting and clinic operations.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "EMR platform development Kerala",
+    "healthcare web application case study",
+    "clinic management software India",
+    "React medical software developer",
+  ],
+  alternates: { canonical: "https://getsayyan.com/case-studies/abate-emr-platform" },
+  openGraph: {
+    title: "Abate AS EMR Platform Case Study — Sayyan",
+    description:
+      "Clinical Electronic Medical Records (EMR) platform built with React, Node.js, and PostgreSQL.",
+    url: "https://getsayyan.com/case-studies/abate-emr-platform",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abate AS EMR Platform Case Study — Sayyan",
+    description:
+      "Modern digital healthcare records management platform built with React and PostgreSQL.",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Abate AS EMR",
+          item: "https://getsayyan.com/case-studies/abate-emr-platform",
+        },
+      ],
+    },
+    {
+      "@type": "TechArticle",
+      headline: "Abate AS EMR Platform Case Study — Clinical Healthcare Portal",
+      description:
+        "Case study of Abate AS clinical Electronic Medical Records (EMR) platform built with React, Node.js, and PostgreSQL for clinical operations.",
+      image: "https://getsayyan.com/images/abate-emr-platform-react-postgresql.jpeg",
+      author: {
+        "@type": "Person",
+        name: "Muhammed Sayyan",
+        url: "https://getsayyan.com",
+      },
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "Sayyan Web Solutions",
+        url: "https://getsayyan.com",
+      },
+    },
+  ],
 };
 
 export default function AbateEmrCaseStudy() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">

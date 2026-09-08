@@ -5,15 +5,80 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
+import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 export const metadata: Metadata = {
-  title: "SWA Diamonds E-Commerce Case Study — Muhammed Sayyan E",
+  title: "SWA Diamonds E-Commerce Case Study — Sayyan | Luxury Storefront",
   description:
-    "Case study of SWA Diamonds luxury jewelry e-commerce storefront built with Next.js and Node.js.",
+    "Case study of SWA Diamonds luxury jewelry e-commerce storefront built with Next.js and Node.js for diamond catalog showcase and customer conversion.",
+  keywords: [
+    ...ALL_TARGET_KEYWORDS,
+    "luxury ecommerce case study",
+    "Next.js jewelry store development",
+    "diamond brand website development",
+    "ecommerce developer Kerala",
+  ],
+  alternates: { canonical: "https://getsayyan.com/case-studies/swa-diamonds" },
+  openGraph: {
+    title: "SWA Diamonds E-Commerce Case Study — Sayyan",
+    description:
+      "Luxury digital storefront and catalog built with Next.js for high-end diamond jewelry.",
+    url: "https://getsayyan.com/case-studies/swa-diamonds",
+    siteName: "Sayyan – Freelance Developer",
+    locale: "en_IN",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SWA Diamonds E-Commerce Case Study — Sayyan",
+    description:
+      "Luxury jewelry digital storefront and catalog built with Next.js and Node.js.",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://getsayyan.com" },
+        { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://getsayyan.com/case-studies" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "SWA Diamonds",
+          item: "https://getsayyan.com/case-studies/swa-diamonds",
+        },
+      ],
+    },
+    {
+      "@type": "TechArticle",
+      headline: "SWA Diamonds E-Commerce Case Study — Luxury Digital Storefront",
+      description:
+        "Case study of SWA Diamonds luxury jewelry e-commerce storefront built with Next.js and Node.js.",
+      image: "https://getsayyan.com/images/swa-diamonds-ecommerce-nextjs.png",
+      author: {
+        "@type": "Person",
+        name: "Muhammed Sayyan",
+        url: "https://getsayyan.com",
+      },
+      publisher: {
+        "@type": "ProfessionalService",
+        name: "Sayyan Web Solutions",
+        url: "https://getsayyan.com",
+      },
+    },
+  ],
 };
 
 export default function SwaDiamondsCaseStudy() {
   return (
     <div className="relative min-h-screen flex flex-col justify-between overflow-x-hidden text-white pt-32 bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">

@@ -15,7 +15,7 @@ export const Footer = () => {
             {selfData.name}
           </p>
           <p className="text-xs text-neutral-500">
-            {selfData.jobTitle} · {selfData.current_location.city}, {selfData.current_location.state}
+            {selfData.jobTitle} · {selfData.current_location.city}, {selfData.current_location.district}, {selfData.current_location.state}
           </p>
         </div>
 
