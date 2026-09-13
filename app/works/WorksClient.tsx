@@ -263,7 +263,7 @@ export default function WorksClient() {
         <GsapFade
           direction="up"
           delay={0.2}
-          className="w-full mt-16 text-center border-t border-white/10 pt-20"
+          className="w-full mt-16 text-center border-t border-white/10 pt-20 pb-12"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-6">
             HAVE A PROJECT <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">IN MIND?</span>
