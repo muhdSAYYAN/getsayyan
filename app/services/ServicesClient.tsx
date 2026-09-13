@@ -295,7 +295,7 @@ export default function ServicesClient() {
     >
       <Navbar />
 
-      <main className="relative z-10 px-6 max-w-7xl mx-auto flex flex-col items-center flex-grow w-full pb-24">
+      <main className="relative z-10 px-6 max-w-7xl mx-auto flex flex-col items-center flex-grow w-full ">
         {/* Hero Section */}
         <div ref={heroRef} className="text-center max-w-4xl mb-24 md:mb-32">
           <p className="text-xs md:text-sm tracking-[0.4em] text-neutral-400 uppercase mb-6 inline-block py-2 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
@@ -548,7 +548,7 @@ export default function ServicesClient() {
         <GsapFade
           direction="up"
           delay={0.2}
-          className="w-full text-center border-t border-white/10 pt-20 pb-24 mb-16"
+          className="w-full text-center border-t border-white/10 pt-20 pb-2 mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none mb-6">
             READY TO <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">START?</span>
