@@ -59,7 +59,7 @@ export default function AboutClient() {
             ABOUT <span className="bg-gradient-to-r from-white via-neutral-400 to-neutral-600 bg-clip-text text-transparent">SAYYAN</span>
           </h1>
           <p className="text-neutral-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            Freelance Full-Stack Developer · {selfData.current_location.city}, {selfData.current_location.state}
+            Full-Stack Developer · {selfData.current_location.city}, {selfData.current_location.state} ,India
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function AboutClient() {
               </ul>
             </div>
           </GsapFade>
-          
+
           <GsapFade direction="right" distance={40} delay={0.2} className="lg:col-span-5 flex flex-col gap-8">
             {/* Shady Dark Profile Photo Card */}
             <div className="relative group w-full p-3 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.9)] hover:border-white/20 transition-all duration-500">
