@@ -37,12 +37,12 @@ export const selfData = {
     "Delivered On Time"
   ],
 
-  desc: "Front-End Focused Full-Stack Developer (MERN) with 3+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB.",
+  desc: "Freelance Web Developer & Software Developer in Kerala (Malappuram, Kozhikode, Perinthalmanna) serving clients across India, UAE, Dubai, Abu Dhabi, and Saudi Arabia. Specialized in React.js, Next.js, TypeScript, Tailwind CSS, Node.js, and MongoDB.",
 
-  bio: "Front-End Focused Full-Stack Developer (MERN) with 3+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB. Track record of cutting development time by 30% through reusable component libraries, integrating RESTful APIs, and shipping pixel-perfect, accessible, SEO-optimized interfaces in Agile/Scrum teams alongside UI/UX designers and backend engineers.",
+  bio: "Freelance Web & Software Developer based in Malappuram, Kerala — serving clients in Kozhikode, Perinthalmanna, Manjeri, UAE, Dubai, and Saudi Arabia. Front-End Focused Full-Stack Developer (MERN) with 3+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB. Track record of cutting development time by 30% through reusable component libraries, integrating RESTful APIs, and shipping pixel-perfect, accessible, SEO-optimized interfaces in Agile/Scrum teams alongside UI/UX designers and backend engineers.",
 
   about: [
-    "I'm Muhammed Sayyan E, a Front-End Focused Full-Stack Developer (MERN) based in Malappuram / Kozhikode, Kerala with 3+ years of experience.",
+    "I'm Muhammed Sayyan E, a Freelance Web Developer & Software Developer based in Malappuram / Kozhikode / Perinthalmanna, Kerala with 3+ years of experience serving clients in India, the UAE, Dubai, and Saudi Arabia.",
     "Over the past 3+ years, I've architected and delivered production-grade web interfaces serving thousands of active users across digital health (Buktor), retail POS, e-learning platforms, and luxury e-commerce.",
     "Specialized in cutting development time by 30% through reusable component libraries, optimizing UI rendering performance with memoization & code splitting, holding under 2% deviation from Figma specs, and reducing UI bugs by 40%."
   ],
