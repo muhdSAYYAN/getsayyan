@@ -4,33 +4,26 @@ import Image from "next/image";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Web Development Projects — Sayyan | Kerala & GCC",
+  title: "Web Development Case Studies, Kerala & GCC",
   description:
-    "Real production web applications, medical EMR platforms, POS dashboards, and e-commerce systems delivered for clients across India and the GCC.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "web development case studies",
-    "React project portfolio Kerala",
-    "full stack case studies India",
-  ],
+    "Real production web apps, EMR platforms, POS dashboards and e-commerce stores built for clients in India and Saudi Arabia.",
   alternates: { canonical: "https://getsayyan.com/case-studies" },
   openGraph: {
-    title: "Case Studies | Web Development Projects — Sayyan",
+    title: "Web Development Case Studies, Kerala & GCC",
     description:
-      "Real production web applications, medical EMR platforms, POS dashboards, and e-commerce systems delivered for clients across India and the GCC.",
+      "Real production web apps, EMR platforms, POS dashboards and e-commerce stores built for clients in India and Saudi Arabia.",
     url: "https://getsayyan.com/case-studies",
-    siteName: "Sayyan – Freelance Developer",
+    siteName: "Sayyan",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Case Studies | Sayyan — Web Developer",
+    title: "Web Development Case Studies, Kerala & GCC",
     description:
-      "Explore real web application and e-commerce case studies delivered by Sayyan.",
+      "Real production web apps, EMR platforms, POS dashboards and e-commerce stores built for clients in India and Saudi Arabia.",
   },
 };
 
@@ -80,7 +73,7 @@ const caseStudies = [
     desc: "A custom point-of-sale dashboard built on React, Node.js, Express, and MongoDB — real-time order entry, stock tracking, and sales analytics.",
     tools: ["React", "Node.js", "MongoDB", "Express"],
     img: "/images/chocolate-pos-dashboard-react-nodejs.jpeg",
-    alt: "Chocolate POS dashboard built with React and Node.js",
+    alt: "Chocolate POS dashboard built with React and Node.js for real-time order and inventory management",
   },
   {
     slug: "abate-emr-platform",
@@ -89,7 +82,7 @@ const caseStudies = [
     desc: "A fully digital Electronic Medical Records (EMR) platform developed to modernize clinic operations, patient charting, and prescription generation.",
     tools: ["React", "Node.js", "PostgreSQL"],
     img: "/images/abate-emr-platform-react-postgresql.jpeg",
-    alt: "Abate AS EMR platform built with React and PostgreSQL",
+    alt: "Abate AS electronic medical records platform built with React and PostgreSQL",
   },
   {
     slug: "swa-diamonds",
@@ -98,7 +91,7 @@ const caseStudies = [
     desc: "A breathtaking digital storefront and catalog for a luxury diamond jewelry brand built with Next.js and React.",
     tools: ["React", "Next.js", "Node.js"],
     img: "/images/swa-diamonds-ecommerce-nextjs.png",
-    alt: "SWA Diamonds e-commerce storefront built with Next.js",
+    alt: "SWA Diamonds luxury jewelry e-commerce storefront built with Next.js",
   },
   {
     slug: "velota",
@@ -107,7 +100,7 @@ const caseStudies = [
     desc: "A versatile dashboard interface and accompanying static web portal built with Next.js, TypeScript, and GSAP micro-animations.",
     tools: ["Next.js", "TypeScript", "GSAP"],
     img: "/images/velota-dashboard-nextjs-typescript.jpeg",
-    alt: "Velota dashboard built with Next.js and TypeScript",
+    alt: "Velota high-speed analytical dashboard built with Next.js and TypeScript",
   },
 ];
 

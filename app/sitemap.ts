@@ -68,7 +68,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
-    // Service Subpages
+    // Location-Specific Landing Pages — Kerala
+    {
+      path: "/web-developer-malappuram",
+      file: "app/web-developer-malappuram/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
+      path: "/web-developer-kozhikode",
+      file: "app/web-developer-kozhikode/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
+      path: "/web-developer-perinthalmanna",
+      file: "app/web-developer-perinthalmanna/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    // Location-Specific Landing Pages — UAE & GCC
+    {
+      path: "/web-developer-dubai",
+      file: "app/web-developer-dubai/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
+      path: "/web-developer-uae",
+      file: "app/web-developer-uae/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
+      path: "/web-developer-saudi-arabia",
+      file: "app/web-developer-saudi-arabia/page.tsx",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
     {
       path: "/services/web-development",
       file: "app/services/web-development/page.tsx",

@@ -4,13 +4,12 @@ import Image from "next/image";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Vazhayil Natural Case Study — Decentralized Organic Waste Management Platform",
+  title: "Vazhayil Natural: Organic Waste Platform Case Study",
   description:
-    "Case study of Vazhayil Natural's eco-tech platform built with Next.js, TypeScript, and Tailwind CSS for biological waste management solutions and product distribution.",
-  keywords: ALL_TARGET_KEYWORDS,
+    "How Sayyan built Vazhayil Natural's eco-tech platform with Next.js and Tailwind CSS for biological waste management and WhatsApp order routing.",
   alternates: { canonical: "https://getsayyan.com/case-studies/vazhayil-natural" },
   openGraph: {
     title: "Vazhayil Natural Case Study — Muhammed Sayyan E",

@@ -3,19 +3,12 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "E-Commerce Platform Development Services — Sayyan | Kerala",
+  title: "E-Commerce Platform Development Services",
   description:
-    "Custom high-converting e-commerce storefronts, shopping carts, multi-currency support, and payment gateway integrations built with Next.js and React.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "ecommerce website development Kerala",
-    "Next.js ecommerce developer",
-    "custom online store development Malappuram",
-    "payment gateway integration Kerala",
-  ],
+    "Custom e-commerce storefronts with multi-currency support, payment gateways and inventory dashboards. Built with Next.js for Kerala and GCC businesses.",
   alternates: { canonical: "https://getsayyan.com/services/ecommerce-development" },
   openGraph: {
     title: "E-Commerce Platform Development Services — Sayyan",

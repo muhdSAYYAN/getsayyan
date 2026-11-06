@@ -3,20 +3,12 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Web Application Development Services — Sayyan | Kerala & GCC",
+  title: "Web Application Development Services in Kerala & GCC",
   description:
-    "Custom, scalable, and high-performance web applications built using React.js, Next.js, Node.js, and MongoDB. Fast page loads, secure backends, and responsive design.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "web application development Kerala",
-    "custom React web development",
-    "Next.js web developer Manjeri",
-    "full stack web development Calicut",
-    "hire web app developer India",
-  ],
+    "Custom, scalable web applications built with React, Next.js, Node.js and MongoDB for businesses in Kerala, the UAE and Saudi Arabia. Fast and secure.",
   alternates: { canonical: "https://getsayyan.com/services/web-development" },
   openGraph: {
     title: "Web Application Development Services — Sayyan",

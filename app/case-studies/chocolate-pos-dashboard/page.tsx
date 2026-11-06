@@ -5,19 +5,12 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Chocolate POS Dashboard Case Study — Sayyan | Retail POS Solution",
+  title: "Chocolate POS: Retail Point-of-Sale Dashboard Case Study",
   description:
-    "Case study of Chocolate POS dashboard system built with React, Node.js, Express, and MongoDB for high-speed retail checkout and inventory tracking.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "POS dashboard case study",
-    "retail POS development",
-    "React POS application",
-    "Node.js inventory dashboard",
-  ],
+    "How Sayyan built a real-time POS dashboard with React, Node.js and MongoDB for high-traffic retail checkout and inventory tracking.",
   alternates: { canonical: "https://getsayyan.com/case-studies/chocolate-pos-dashboard" },
   openGraph: {
     title: "Chocolate POS Dashboard Case Study — Sayyan",

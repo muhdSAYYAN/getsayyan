@@ -3,19 +3,12 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Cross-Platform Mobile App Development Services — Sayyan | Kerala",
+  title: "Mobile App Development Services, React Native",
   description:
-    "Cross-platform mobile application development for iOS and Android using React Native and REST API backends. Fast, scalable, and native-feeling.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "mobile app development Kerala",
-    "React Native developer Malappuram",
-    "iOS and Android app development",
-    "hire React Native developer India",
-  ],
+    "Cross-platform mobile apps for iOS and Android using React Native. Offline sync, push notifications and secure payment integrations for Kerala and GCC.",
   alternates: { canonical: "https://getsayyan.com/services/mobile-app-development" },
   openGraph: {
     title: "Mobile App Development Services — Sayyan",

@@ -1,195 +1,6 @@
-// import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import { inter, mono, nasalization, quentine } from "@/app/font";
-// import "./globals.css";
-// import { SmoothScrollProvider } from "@/components/commonui/SmoothScrollProvider";
-// import { Background } from "@/components/commonui/Background";
-// import SocialSidebar from "@/components/commonui/SocialSidebar";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-// export const metadata: Metadata = {
-//   title: {
-//     default:
-//       "getsayyan.com | Web Developer in Kerala, Bangalore, Hyderabad, Chennai & GCC",
-//     template: "%s | getsayyan.com",
-//   },
-
-//   description:
-//     "Sayyan is a professional web developer offering website development in Kerala, Bangalore, Hyderabad, Chennai, UAE, Dubai and Saudi Arabia. متخصص in student projects, college final year projects, business websites, and SEO-optimized applications.",
-
-//   keywords: [
-//     // Branding
-//     "Sayyan",
-//     "getsayyan.com",
-//     "sayyan web designer",
-//     "Sayyan developer",
-
-//     // Kerala
-//     "best developer in Manjeri",
-//     "best developer in Malappuram",
-//     "best developer in Areekode",
-//     "best developer in Perinthalmanna",
-//     "best developer in Calicut",
-//     "best developer in Kozhikode",
-//     "best developer in Kerala",
-
-//     // India Cities
-//     "web developer Bangalore",
-//     "best developer in Bangalore",
-//     "web developer Hyderabad",
-//     "best developer in Hyderabad",
-//     "web developer Chennai",
-//     "best developer in Chennai",
-
-//     // GCC
-//     "web developer Dubai",
-//     "web developer UAE",
-//     "web developer Saudi Arabia",
-//     "freelance developer UAE",
-
-//     // Student / College Projects
-//     "student web development projects",
-//     "college final year projects web development",
-//     "mini project for students web",
-//     "MCA project developer",
-//     "BCA project developer",
-//     "engineering web project help",
-//     "final year project developer India",
-
-//     // Services
-//     "React developer",
-//     "Next.js developer",
-//     "full stack developer",
-//     "ecommerce website developer",
-
-//     // Intent
-//     "hire web developer near me",
-//     "affordable website developer",
-//     "freelance web developer India",
-//   ],
-
-//   authors: [{ name: "Sayyan" }],
-//   creator: "Sayyan",
-
-//   openGraph: {
-//     title:
-//       "getsayyan.com | Web Developer in Kerala, Bangalore, Hyderabad, Chennai & GCC",
-//     description:
-//       "Professional web developer for businesses, startups, and students. Serving India and GCC with modern, fast, SEO-optimized websites.",
-//     url: "https://getsayyan.com",
-//     siteName: "getsayyan.com",
-//     locale: "en_IN",
-//     type: "website",
-//   },
-
-//   robots: {
-//     index: true,
-//     follow: true,
-//   },
-
-//   metadataBase: new URL("https://getsayyan.com"),
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <head>
-//         {/* GEO SEO - INDIA */}
-//         <meta name="geo.region" content="IN-KL" />
-//         <meta
-//           name="geo.placename"
-//           content="Kerala, Malappuram, Manjeri, Kozhikode"
-//         />
-
-//         <meta name="geo.region" content="IN-KA" />
-//         <meta name="geo.placename" content="Bangalore, Karnataka" />
-
-//         <meta name="geo.region" content="IN-TG" />
-//         <meta name="geo.placename" content="Hyderabad, Telangana" />
-
-//         <meta name="geo.region" content="IN-TN" />
-//         <meta name="geo.placename" content="Chennai, Tamil Nadu" />
-
-//         {/* GEO SEO - GCC */}
-//         <meta name="geo.region" content="AE-DU" />
-//         <meta name="geo.placename" content="Dubai, UAE" />
-
-//         <meta name="geo.region" content="SA" />
-//         <meta name="geo.placename" content="Saudi Arabia" />
-
-//         {/* Coordinates (Kerala base) */}
-//         <meta name="geo.position" content="11.2588;75.7804" />
-//         <meta name="ICBM" content="11.2588, 75.7804" />
-
-//         {/* STRUCTURED DATA */}
-//         <script
-//           type="application/ld+json"
-//           dangerouslySetInnerHTML={{
-//             __html: JSON.stringify({
-//               "@context": "https://schema.org",
-//               "@type": "Person",
-//               name: "Sayyan",
-//               url: "https://getsayyan.com",
-//               jobTitle: "Web Developer",
-//               areaServed: [
-//                 "Kerala",
-//                 "Malappuram",
-//                 "Manjeri",
-//                 "Kozhikode",
-//                 "Bangalore",
-//                 "Hyderabad",
-//                 "Chennai",
-//                 "Dubai",
-//                 "UAE",
-//                 "Saudi Arabia",
-//               ],
-//               knowsAbout: [
-//                 "Web Development",
-//                 "Student Projects",
-//                 "College Final Year Projects",
-//                 "React",
-//                 "Next.js",
-//                 "Full Stack Development",
-//               ],
-//               sameAs: [
-//                 "https://github.com/yourprofile",
-//                 "https://in.linkedin.com/in/sayyan-muhammed-bb8105282",
-//               ],
-//             }),
-//           }}
-//         />
-//       </head>
-
-//       <body
-//         className={`${inter.variable} ${mono.variable} ${nasalization.variable} ${quentine.variable} ${geistSans.variable} ${geistMono.variable}`}
-//       >
-//         <SmoothScrollProvider>
-//           <Background />
-//           <SocialSidebar />
-//           {children}
-//         </SmoothScrollProvider>
-//       </body>
-//     </html>
-//   );
-// }
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { inter, mono, nasalization, quentine } from "@/app/font";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/commonui/SmoothScrollProvider";
 import { Background } from "@/components/commonui/Background";
@@ -206,24 +17,79 @@ const geistMono = Geist_Mono({
 });
 
 // ── SITE-WIDE CONSTANTS ───────────────────────────────────────────────────
-const SITE_URL = "https://getsayyan.com";
+export const SITE_URL = "https://getsayyan.com";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
-const PHONE = "+918086232426";
-const EMAIL = "sayyanelayodan@gmail.com";
-const FOUNDER_NAME = "Muhammed Sayyan";
-
-const PRIMARY_DESCRIPTION =
-  "Sayyan is a professional freelance web developer in Malappuram, Manjeri, Areekode, Kerala, offering React, Next.js, MERN Stack & Odoo ERP development for businesses, startups, and students — serving Kerala, India & GCC.";
+export const PHONE = "+918086232426";
+export const PHONE_DISPLAY = "+91 80862 32426";
+export const EMAIL = "sayyanelayodan@gmail.com";
+export const FOUNDER_NAME = "Muhammed Sayyan E";
+export const WHATSAPP_URL = "https://wa.me/918086232426";
+export const INSTAGRAM_URL = "https://instagram.com/getsayyan";
+export const LINKEDIN_URL = "https://in.linkedin.com/in/sayyan-muhammed-bb8105282";
+export const GITHUB_URL = "https://github.com/muhdSAYYAN";
+export const MAPS_URL =
+  "https://www.google.com/maps/place/Sayyan+%7C+Web+Developer+in+Malappuram/@11.0618617,76.0683917,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!3m5!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!8m2!3d11.1104106!4d76.1205454!16s%2Fg%2F11n58h_cz7";
 
 // ── METADATA ──────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+
   title: {
-    default: "Sayyan | Freelance Web Developer in Malappuram, Kerala",
-    template: "%s | Sayyan",
+    default: "Freelance Web & Software Developer in Kerala | Malappuram, Kozhikode, Perinthalmanna | UAE, Dubai, Saudi Arabia | Sayyan",
+    template: "%s | Sayyan – Freelance Developer Kerala & GCC",
   },
-  description: PRIMARY_DESCRIPTION,
-  keywords: ALL_TARGET_KEYWORDS,
-  authors: [{ name: "Sayyan", url: SITE_URL }],
+
+  description:
+    "Freelance web & software developer based in Malappuram, Kerala. Serving clients in Kozhikode, Perinthalmanna, Manjeri, Dubai, Abu Dhabi, UAE & Saudi Arabia. Expert in React, Next.js & MERN stack. Hire a top freelance developer now.",
+
+  keywords: [
+    // Kerala locations
+    "web developer in Kerala",
+    "software developer in Kerala",
+    "web developer Malappuram",
+    "web developer Kozhikode",
+    "web developer Perinthalmanna",
+    "web developer Manjeri",
+    "web developer Calicut",
+    "freelance web developer Kerala",
+    "freelance developer Malappuram",
+    "freelance developer Kozhikode",
+    "freelance developer Perinthalmanna",
+    "freelance software developer Kerala",
+    "hire web developer Kerala",
+    "hire developer Malappuram",
+    "best web developer Kerala",
+    "web development company Malappuram",
+    "web development Kozhikode",
+    "Next.js developer Kerala",
+    "React developer Kerala",
+    "MERN stack developer Kerala",
+    "full stack developer Kerala",
+    "full stack developer Malappuram",
+    // UAE & GCC
+    "web developer UAE",
+    "web developer Dubai",
+    "web developer Abu Dhabi",
+    "freelance web developer Dubai",
+    "freelance developer UAE",
+    "freelance software developer Dubai",
+    "hire web developer UAE",
+    "hire freelance developer Dubai",
+    "web developer Saudi Arabia",
+    "freelance developer Saudi Arabia",
+    "web development company UAE",
+    "React developer Dubai",
+    "Next.js developer UAE",
+    "software developer Dubai",
+    "software developer Abu Dhabi",
+    "software developer Saudi Arabia",
+    "GCC web developer",
+    "remote web developer for UAE",
+    "remote developer for Dubai",
+    "Kerala developer for GCC",
+  ],
+
+  authors: [{ name: "Muhammed Sayyan E", url: SITE_URL }],
   creator: "Sayyan Web Solutions",
   publisher: "Sayyan Web Solutions",
 
@@ -232,10 +98,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Sayyan | Freelance Web Developer in Malappuram, Kerala",
-    description: PRIMARY_DESCRIPTION,
+    title: "Freelance Web & Software Developer in Kerala, UAE & Saudi Arabia | Sayyan",
+    description:
+      "Top freelance web & software developer in Malappuram, Kozhikode, Perinthalmanna, Kerala — serving UAE, Dubai, Abu Dhabi & Saudi Arabia. React, Next.js & MERN stack expert.",
     url: SITE_URL,
-    siteName: "Sayyan – Freelance Developer",
+    siteName: "Sayyan – Freelance Developer Kerala & GCC",
     locale: "en_IN",
     type: "website",
     images: [
@@ -243,15 +110,16 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Sayyan – Professional Freelance Web Developer in Malappuram, Kerala",
+        alt: "Sayyan – Freelance Web & Software Developer in Malappuram, Kerala | UAE, Dubai, Saudi Arabia",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Sayyan | Freelance Web Developer in Malappuram, Kerala",
-    description: PRIMARY_DESCRIPTION,
+    title: "Freelance Web & Software Developer in Kerala | UAE, Dubai, Saudi Arabia | Sayyan",
+    description:
+      "Top freelance web & software developer in Malappuram, Kozhikode, Perinthalmanna, Kerala — serving UAE, Dubai, Abu Dhabi & Saudi Arabia. React, Next.js & MERN.",
     images: [OG_IMAGE],
   },
 
@@ -266,8 +134,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-
-  metadataBase: new URL(SITE_URL),
 };
 
 // ── STRUCTURED DATA (single source of truth per entity type) ──────────────
@@ -275,80 +141,82 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Sayyan",
-  alternateName: FOUNDER_NAME,
+  "@id": `${SITE_URL}/#person`,
+  name: "Muhammed Sayyan E",
+  alternateName: ["Sayyan", "Sayyan Developer", "Sayyan Web Developer"],
   url: SITE_URL,
-  jobTitle: "Freelance Web Developer & Software Consultant",
-  description: PRIMARY_DESCRIPTION,
-  image: OG_IMAGE,
+  jobTitle: "Freelance Full-Stack Web & Software Developer",
+  description:
+    "Muhammed Sayyan E is a top freelance web and software developer based in Malappuram, Kerala. He builds high-performance web apps, mobile apps, and custom software for clients in Kozhikode, Perinthalmanna, Manjeri, Dubai, Abu Dhabi, UAE, and Saudi Arabia using React, Next.js, and MERN stack.",
+  image: `${SITE_URL}/sayyan-profile-pic.webp`,
   email: EMAIL,
   telephone: PHONE,
-  areaServed: [
-    "Malappuram",
-    "Manjeri",
-    "Areekode",
-    "Perinthalmanna",
-    "Kondotty",
-    "Tirur",
-    "Kottakkal",
-    "Ponnani",
-    "Calicut",
-    "Kozhikode",
-    "Kochi",
-    "Kerala",
-    "Bangalore",
-    "Hyderabad",
-    "Chennai",
-    "India",
-    "Dubai",
-    "Abu Dhabi",
-    "UAE",
-    "Riyadh",
-    "Saudi Arabia",
-    "Qatar",
-    "Kuwait",
-    "Oman",
-    "Bahrain",
-  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Near Kacherippadi Stand, Kacherippadi",
+    addressLocality: "Manjeri",
+    addressRegion: "Kerala",
+    addressCountry: "IN",
+    postalCode: "676123",
+  },
   knowsAbout: [
-    "Web Development",
     "React",
     "Next.js",
-    "MERN Stack",
+    "TypeScript",
     "Node.js",
     "MongoDB",
-    "Odoo ERP",
-    "Odoo Customization",
-    "Full Stack Development",
+    "PostgreSQL",
+    "React Native",
     "JavaScript",
-    "TypeScript",
     "Tailwind CSS",
     "REST API",
-    "Student Projects",
-    "College Final Year Projects",
+    "Full Stack Development",
     "E-commerce Development",
-    "SEO Optimization",
+    "Freelance Web Development",
+    "Software Development",
+    "MERN Stack",
+    "Web Application Development",
   ],
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Freelance Web Developer",
+    occupationLocation: [
+      { "@type": "City", name: "Malappuram" },
+      { "@type": "City", name: "Kozhikode" },
+      { "@type": "City", name: "Perinthalmanna" },
+      { "@type": "AdministrativeArea", name: "Kerala" },
+    ],
+    description:
+      "Freelance full-stack web and software developer serving clients in Kerala (Malappuram, Kozhikode, Perinthalmanna), UAE (Dubai, Abu Dhabi), and Saudi Arabia.",
+  },
   sameAs: [
-    "https://github.com/yourprofile",
-    "https://in.linkedin.com/in/sayyan-muhammed-bb8105282",
+    GITHUB_URL,
+    LINKEDIN_URL,
+    INSTAGRAM_URL,
+    MAPS_URL,
   ],
 };
 
-// Single authoritative business schema — merged LocalBusiness + ProfessionalService
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${SITE_URL}/#business`,
   name: "Sayyan Web Solutions",
-  alternateName: "Sayyan | Web Developer in Malappuram",
+  alternateName: [
+    "Sayyan | Web Developer in Malappuram",
+    "Sayyan | Freelance Developer Kerala",
+    "Sayyan | Web Developer in Kozhikode",
+    "Sayyan | Web Developer for UAE & Dubai",
+  ],
   url: SITE_URL,
   image: OG_IMAGE,
-  description: PRIMARY_DESCRIPTION,
+  description:
+    "Top freelance web & software developer in Malappuram, Kerala. Serving businesses in Kozhikode, Perinthalmanna, Manjeri, Dubai, Abu Dhabi, UAE, and Saudi Arabia. Expert in React, Next.js, MERN stack development.",
   telephone: PHONE,
   email: EMAIL,
   priceRange: "₹₹",
-  founder: { "@type": "Person", name: FOUNDER_NAME },
+  currenciesAccepted: "INR, AED, SAR, USD",
+  founder: { "@type": "Person", "@id": `${SITE_URL}/#person` },
 
   address: {
     "@type": "PostalAddress",
@@ -365,30 +233,38 @@ const localBusinessSchema = {
     longitude: "76.1205454",
   },
 
-  hasMap:
-    "https://www.google.com/maps/place/Sayyan+%7C+Web+Developer+in+Malappuram/@11.0618617,76.0683917,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!3m5!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!8m2!3d11.1104106!4d76.1205454!16s%2Fg%2F11n58h_cz7",
+  hasMap: MAPS_URL,
+
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "09:00",
+    closes: "19:00",
+  },
 
   areaServed: [
+    { "@type": "AdministrativeArea", name: "Kerala" },
     { "@type": "City", name: "Malappuram" },
     { "@type": "City", name: "Manjeri" },
-    { "@type": "City", name: "Areekode" },
-    { "@type": "City", name: "Perinthalmanna" },
-    { "@type": "City", name: "Kondotty" },
-    { "@type": "City", name: "Tirur" },
-    { "@type": "City", name: "Kottakkal" },
-    { "@type": "City", name: "Ponnani" },
-    { "@type": "City", name: "Calicut" },
     { "@type": "City", name: "Kozhikode" },
+    { "@type": "City", name: "Calicut" },
+    { "@type": "City", name: "Perinthalmanna" },
+    { "@type": "City", name: "Tirur" },
     { "@type": "City", name: "Kochi" },
-    { "@type": "State", name: "Kerala" },
-    { "@type": "City", name: "Bangalore" },
-    { "@type": "City", name: "Hyderabad" },
-    { "@type": "City", name: "Chennai" },
     { "@type": "Country", name: "India" },
     { "@type": "City", name: "Dubai" },
     { "@type": "City", name: "Abu Dhabi" },
+    { "@type": "City", name: "Sharjah" },
     { "@type": "Country", name: "United Arab Emirates" },
     { "@type": "City", name: "Riyadh" },
+    { "@type": "City", name: "Jeddah" },
     { "@type": "Country", name: "Saudi Arabia" },
     { "@type": "Country", name: "Qatar" },
     { "@type": "Country", name: "Kuwait" },
@@ -397,20 +273,25 @@ const localBusinessSchema = {
   ],
 
   serviceType: [
+    "Freelance Web Development",
+    "Freelance Software Development",
     "Web Development",
+    "Mobile App Development",
+    "E-commerce Development",
+    "API & Backend Development",
+    "Warehouse Management Systems",
+    "Hospital Management Software",
     "React Development",
     "Next.js Development",
     "MERN Stack Development",
-    "Odoo ERP Development",
-    "Full Stack Development",
-    "E-commerce Development",
-    "Student Project Development",
+    "Technical Mentorship",
   ],
 
   sameAs: [
-    "https://github.com/muhdSAYYAN",
-    "https://in.linkedin.com/in/sayyan-muhammed-bb8105282",
-    "https://www.google.com/maps/place/Sayyan+%7C+Web+Developer+in+Malappuram/@11.0618617,76.0683917,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!1m6!1m2!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!2sSayyan+%7C+Web+Developer+in+Malappuram,+near+Kacherippadi+stand,+Kacherippadi,+Manjeri,+Kerala+676123!2m2!1d76.1205454!2d11.1104106!3m5!1s0x3ba65b1319521a0b:0x5cff8bca110d3c85!8m2!3d11.1104106!4d76.1205454!16s%2Fg%2F11n58h_cz7",
+    GITHUB_URL,
+    LINKEDIN_URL,
+    INSTAGRAM_URL,
+    MAPS_URL,
   ],
 };
 
@@ -418,15 +299,11 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
-  name: "Sayyan – Freelance Developer",
+  name: "Sayyan",
   url: SITE_URL,
-  description: PRIMARY_DESCRIPTION,
+  description:
+    "Freelance web & software developer in Manjeri, Kerala serving clients in India, the UAE, Saudi Arabia and the wider GCC.",
   publisher: { "@id": `${SITE_URL}/#business` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${SITE_URL}/?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 };
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -437,46 +314,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
-        {/* ── GEO META – PRIMARY: MANJERI, MALAPPURAM ── */}
+        {/* ── GEO META – PRIMARY: MANJERI, KERALA ── */}
         <meta name="geo.region" content="IN-KL" />
         <meta
           name="geo.placename"
-          content="Manjeri, Malappuram, Kerala, India"
+          content="Manjeri, Kerala"
         />
         <meta name="geo.position" content="11.1104106;76.1205454" />
         <meta name="ICBM" content="11.1104106, 76.1205454" />
 
-        {/* ── GEO META – SECONDARY INDIA ── */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bangalore, Karnataka" />
-        <meta name="geo.region" content="IN-TG" />
-        <meta name="geo.placename" content="Hyderabad, Telangana" />
-        <meta name="geo.region" content="IN-TN" />
-        <meta name="geo.placename" content="Chennai, Tamil Nadu" />
-
-        {/* ── GEO META – GCC ── */}
-        <meta name="geo.region" content="AE-DU" />
-        <meta name="geo.placename" content="Dubai, UAE" />
-        <meta name="geo.region" content="SA" />
-        <meta name="geo.placename" content="Saudi Arabia" />
-
-        {/* ── AI PLATFORM / GEO HINTS (ChatGPT, Gemini, Perplexity) ── */}
-        <meta
-          name="subject"
-          content="Affordable Web Development, Freelance Developer, Odoo ERP, React, Next.js, MERN Stack"
-        />
-        <meta
-          name="classification"
-          content="Freelance Web Developer, Software Consultant, Odoo Developer"
-        />
-        <meta name="coverage" content="Malappuram, Kerala, India, UAE" />
-        <meta name="target" content="all" />
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-
-        {/* ── STRUCTURED DATA (deduplicated) ── */}
+        {/* ── STRUCTURED DATA ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
