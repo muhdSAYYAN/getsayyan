@@ -5,19 +5,12 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Velota Analytics Dashboard Case Study — Sayyan | Data Visualization",
+  title: "Velota: High-Speed Analytics Dashboard Case Study",
   description:
-    "Case study of Velota analytics dashboard platform built with Next.js, TypeScript, and GSAP micro-animations for high-speed data visualization.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "dashboard development case study",
-    "Next.js analytics dashboard",
-    "data visualization developer Kerala",
-    "GSAP web development India",
-  ],
+    "How Sayyan built Velota's analytics dashboard with Next.js, TypeScript and GSAP for high-speed data visualisation and real-time reporting.",
   alternates: { canonical: "https://getsayyan.com/case-studies/velota" },
   openGraph: {
     title: "Velota Analytics Dashboard Case Study — Sayyan",

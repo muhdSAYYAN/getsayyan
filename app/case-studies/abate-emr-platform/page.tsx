@@ -5,19 +5,12 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Abate AS EMR Platform Case Study — Sayyan | Healthcare System",
+  title: "Abate AS: Electronic Medical Records Platform Case Study",
   description:
-    "Case study of Abate AS clinical Electronic Medical Records (EMR) platform built with React, Node.js, and PostgreSQL for patient charting and clinic operations.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "EMR platform development Kerala",
-    "healthcare web application case study",
-    "clinic management software India",
-    "React medical software developer",
-  ],
+    "How Sayyan built a clinical EMR platform with React, Node.js and PostgreSQL for patient charting, prescriptions and clinic management.",
   alternates: { canonical: "https://getsayyan.com/case-studies/abate-emr-platform" },
   openGraph: {
     title: "Abate AS EMR Platform Case Study — Sayyan",

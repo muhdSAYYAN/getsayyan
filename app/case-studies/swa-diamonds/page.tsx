@@ -5,19 +5,12 @@ import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "SWA Diamonds E-Commerce Case Study — Sayyan | Luxury Storefront",
+  title: "SWA Diamonds: Luxury E-Commerce Storefront Case Study",
   description:
-    "Case study of SWA Diamonds luxury jewelry e-commerce storefront built with Next.js and Node.js for diamond catalog showcase and customer conversion.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "luxury ecommerce case study",
-    "Next.js jewelry store development",
-    "diamond brand website development",
-    "ecommerce developer Kerala",
-  ],
+    "How Sayyan built a luxury diamond jewelry e-commerce storefront with Next.js and Node.js for catalog showcase and high-end customer conversion.",
   alternates: { canonical: "https://getsayyan.com/case-studies/swa-diamonds" },
   openGraph: {
     title: "SWA Diamonds E-Commerce Case Study — Sayyan",

@@ -139,9 +139,9 @@ export default function Testimonials() {
           ref={marqueeRef}
           className="flex flex-row items-stretch w-[200%]"
         >
-          {[...googleReviewsData, ...googleReviewsData].map((rev, index) => (
+          {googleReviewsData.map((rev, index) => (
             <div
-              key={index}
+              key={`review-${index}`}
               className="w-[360px] sm:w-[420px] md:w-[460px] flex-shrink-0 px-4 flex h-full"
             >
               <div className="relative w-full h-full p-8 flex flex-col justify-between bg-white/[0.03] backdrop-blur-2xl rounded-3xl border border-white/10 group hover:border-white/20 transition-all">
@@ -168,6 +168,48 @@ export default function Testimonials() {
                 </div>
 
                 {/* Client Info */}
+                <div className="pt-6 border-t border-white/10 mt-8 flex items-center justify-between">
+                  <div>
+                    <h4 className="font-bold text-white text-base tracking-tight">
+                      {rev.name}
+                    </h4>
+                    <p className="text-xs text-white/50 font-mono tracking-wider uppercase">
+                      {rev.role}
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+                    <GoogleColorIcon className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* Duplicate set for infinite marquee — hidden from crawlers */}
+          {googleReviewsData.map((rev, index) => (
+            <div
+              key={`clone-${index}`}
+              aria-hidden="true"
+              className="w-[360px] sm:w-[420px] md:w-[460px] flex-shrink-0 px-4 flex h-full"
+            >
+              <div className="relative w-full h-full p-8 flex flex-col justify-between bg-white/[0.03] backdrop-blur-2xl rounded-3xl border border-white/10 group hover:border-white/20 transition-all">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1 text-slate-300">
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-slate-300 text-slate-300" />
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] uppercase font-mono tracking-widest text-white/40 bg-white/5 px-2.5 py-1 rounded-full border border-white/5">
+                        {rev.date}
+                      </span>
+                      <GoogleColorIcon className="w-4 h-4" />
+                    </div>
+                  </div>
+                  <p className="text-neutral-300 text-sm md:text-base leading-relaxed italic">
+                    &ldquo;{rev.quote}&rdquo;
+                  </p>
+                </div>
                 <div className="pt-6 border-t border-white/10 mt-8 flex items-center justify-between">
                   <div>
                     <h4 className="font-bold text-white text-base tracking-tight">

@@ -4,13 +4,12 @@ import Image from "next/image";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight, ExternalLink } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "QINT Group Case Study — MEP Testing, HVAC & Handover Management Platform",
+  title: "QINT Group: MEP & Handover Management Platform Case Study",
   description:
-    "Case study of QINT Group KSA's engineering platform built with Next.js, TypeScript, and Tailwind CSS for MEP testing, TAB, HVAC commissioning, and handover management across Saudi Arabia.",
-  keywords: ALL_TARGET_KEYWORDS,
+    "How Sayyan built QINT Group KSA's engineering platform with Next.js and TypeScript for MEP testing, TAB and building handover across Saudi Arabia.",
   alternates: { canonical: "https://getsayyan.com/case-studies/qint-group" },
   openGraph: {
     title: "QINT Group Case Study — Muhammed Sayyan E",

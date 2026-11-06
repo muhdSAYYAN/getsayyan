@@ -15,13 +15,21 @@ const homeSchema = {
       "@type": "WebSite",
       "@id": "https://getsayyan.com/#website",
       url: "https://getsayyan.com",
-      name: "Sayyan – Freelance Web Developer in Kerala",
+      name: "Sayyan – Freelance Web & Software Developer in Kerala | UAE, Dubai, Saudi Arabia",
       description:
-        "Professional freelance web developer in Malappuram, Manjeri, Kerala specializing in Next.js, React, MERN stack, and custom web applications.",
+        "Top freelance web and software developer in Malappuram, Kozhikode, Perinthalmanna, Kerala. Serving clients in UAE, Dubai, Abu Dhabi, and Saudi Arabia. Expert in Next.js, React, MERN stack.",
       publisher: {
         "@type": "ProfessionalService",
         "@id": "https://getsayyan.com/#business",
         name: "Sayyan Web Solutions",
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://getsayyan.com/?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
       },
     },
     {
@@ -33,7 +41,23 @@ const homeSchema = {
           name: "Who is Sayyan and what web development services do you provide?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sayyan (Muhammed Sayyan E) is a professional freelance web developer based in Manjeri, Malappuram, Kerala. He builds custom high-performance web applications, e-commerce storefronts, POS dashboards, clinical EMR systems, and RESTful API solutions using React, Next.js, Node.js, and MongoDB for clients in Kerala, India, and the GCC.",
+            text: "Sayyan (Muhammed Sayyan E) is a top freelance web and software developer based in Manjeri, Malappuram, Kerala. He builds custom high-performance web applications, e-commerce storefronts, POS dashboards, clinical EMR systems, and RESTful API solutions using React, Next.js, Node.js, and MongoDB for clients in Malappuram, Kozhikode, Perinthalmanna, Kerala, India, UAE, Dubai, Abu Dhabi, and Saudi Arabia.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are you a freelance web developer in Malappuram or Kozhikode?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! Sayyan is a freelance web developer and software developer based in Manjeri, Malappuram, Kerala. He serves clients across Malappuram, Kozhikode (Calicut), Perinthalmanna, Tirur, Manjeri and all of Kerala. In-person meetings are available in Malappuram and Kozhikode districts.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you work with clients in UAE, Dubai, Abu Dhabi, or Saudi Arabia?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Absolutely. Sayyan actively works as a remote freelance web developer and software developer for clients in UAE, Dubai, Abu Dhabi, Sharjah, Saudi Arabia (Riyadh, Jeddah, Dammam), and across the GCC. Communication is WhatsApp-first with flexible time zones. As a Kerala-based freelancer, he offers world-class quality at competitive rates for Middle East clients.",
           },
         },
         {
@@ -46,10 +70,10 @@ const homeSchema = {
         },
         {
           "@type": "Question",
-          name: "Do you work with international clients outside India?",
+          name: "What is the best way to hire a freelance web developer in Kerala for my Dubai or UAE business?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Sayyan actively collaborates remotely with businesses, startups, and agencies across the GCC (Saudi Arabia, UAE, Dubai, Abu Dhabi, Qatar, Oman) and Europe, ensuring seamless communication and on-time delivery.",
+            text: "Simply WhatsApp or contact Sayyan directly at +91 80862 32426. He specializes in serving Kerala-based businesses and GCC/UAE clients remotely. With overlapping working hours, transparent fixed pricing, and direct 1-on-1 communication — no middlemen — you get a dedicated freelance developer for your UAE, Dubai, or Abu Dhabi project.",
           },
         },
         {
@@ -57,7 +81,15 @@ const homeSchema = {
           name: "Where is your office located in Kerala?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our physical office is located near Kacherippadi Stand, Kacherippadi, Manjeri, Malappuram, Kerala 676123, India. Available for in-person meetings across Malappuram and Kozhikode districts.",
+            text: "The office is located near Kacherippadi Stand, Kacherippadi, Manjeri, Malappuram, Kerala 676123, India. Available for in-person meetings across Malappuram and Kozhikode districts, including Perinthalmanna, Tirur, Calicut, and surrounding areas.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you build a website for my business in Perinthalmanna or Kozhikode?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! Sayyan serves businesses throughout Northern Kerala including Perinthalmanna, Kozhikode (Calicut), Malappuram, Manjeri, Tirur, Ponnani, and beyond. He builds custom business websites, e-commerce platforms, and web applications tailored for local Kerala businesses.",
           },
         },
       ],

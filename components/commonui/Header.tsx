@@ -69,7 +69,7 @@ const Header = () => {
         </div>
 
         <p className="text-xs md:text-sm tracking-[0.5em] text-neutral-500 mb-6 uppercase">
-          Software Developer In Kerala , India
+          Software Developer in Kerala, UAE, Saudi Arabia &amp; GCC
         </p>
         <h1 className="font-bold leading-[1.1] tracking-tighter">
           <span className="block text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl">

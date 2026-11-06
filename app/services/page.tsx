@@ -1,34 +1,25 @@
 import type { Metadata } from "next";
 import ServicesClient from "./ServicesClient";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
-  title: "Web Development Services | React, Next.js & Full-Stack — Sayyan",
+  title: "Web Development Services in Kerala & GCC",
   description:
-    "High-performance web development, mobile apps, e-commerce platforms, POS systems, and academic mentoring. Serving clients in Kerala, India & the GCC.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "web development services Kerala",
-    "freelance web development Malappuram",
-    "hire Next.js developer Kerala",
-    "React developer Manjeri",
-    "ecommerce website development Kerala",
-  ],
+    "Custom websites, mobile apps, e-commerce, POS, warehouse and hospital software for businesses in Kerala, the UAE, Saudi Arabia and the wider GCC.",
   alternates: { canonical: "https://getsayyan.com/services" },
   openGraph: {
-    title: "Web Development Services | React, Next.js & Full-Stack — Sayyan",
+    title: "Web Development Services in Kerala & GCC",
     description:
-      "High-performance web development, mobile apps, e-commerce platforms, POS systems, and academic mentoring. Serving clients in Kerala, India & the GCC.",
+      "Custom websites, mobile apps, e-commerce, POS, warehouse and hospital software for businesses in Kerala, the UAE, Saudi Arabia and the wider GCC.",
     url: "https://getsayyan.com/services",
-    siteName: "Sayyan – Freelance Developer",
+    siteName: "Sayyan",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development Services | Sayyan",
+    title: "Web Development Services in Kerala & GCC",
     description:
-      "Custom web applications, e-commerce stores, and software solutions built for growth.",
+      "Custom websites, mobile apps, e-commerce, POS, warehouse and hospital software for businesses in Kerala, the UAE, Saudi Arabia and the wider GCC.",
   },
 };
 

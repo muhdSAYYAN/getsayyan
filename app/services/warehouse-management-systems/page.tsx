@@ -3,19 +3,12 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Warehouse Management & POS Systems — Sayyan | Kerala",
+  title: "Warehouse Management & POS Systems",
   description:
-    "Tailored inventory management software, stock dispatch tracking, and custom POS billing systems built with React, Node.js, and SQL/MongoDB.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "POS software developer Kerala",
-    "warehouse management software development",
-    "custom retail POS system India",
-    "inventory management system developer",
-  ],
+    "Custom inventory management software, stock tracking and POS billing systems built with React, Node.js and MongoDB for retail and logistics businesses.",
   alternates: { canonical: "https://getsayyan.com/services/warehouse-management-systems" },
   openGraph: {
     title: "Warehouse Management & POS Systems — Sayyan",

@@ -3,19 +3,12 @@ import Link from "next/link";
 import { Navbar } from "@/components/commonui/Navbar";
 import { Footer } from "@/components/commonui/Footer";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { ALL_TARGET_KEYWORDS } from "@/lib/seo-keywords";
+
 
 export const metadata: Metadata = {
-  title: "Academic & Final-Year CS Project Mentorship — Sayyan | Kerala",
+  title: "Academic & Final-Year CS Project Mentorship",
   description:
-    "1-on-1 development guidance, code architecture mentorship, and logic explanation for MCA, BCA, B.Tech, and CS students in Kerala & India.",
-  keywords: [
-    ...ALL_TARGET_KEYWORDS,
-    "final year project guidance Kerala",
-    "MCA project guidance Malappuram",
-    "BTech CS project help Kerala",
-    "academic project mentorship India",
-  ],
+    "1-on-1 code architecture mentorship and project guidance for MCA, BCA and B.Tech students in Kerala. Clean code, logic walkthroughs and viva prep.",
   alternates: { canonical: "https://getsayyan.com/services/academic-projects" },
   openGraph: {
     title: "Academic & Final-Year CS Project Mentorship — Sayyan",
